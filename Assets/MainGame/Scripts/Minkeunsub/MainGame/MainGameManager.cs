@@ -24,7 +24,7 @@ public class MainGameManager : MonoBehaviour
     }
 
     Vector2 mousePos;
-    public Camera camera;
+    public Camera cameras;
     public GameObject coin;
 
     public bool isCoinIncrease = false;
@@ -95,7 +95,7 @@ public class MainGameManager : MonoBehaviour
     public void ScreenOnClick()
     {
         mousePos = Input.mousePosition;
-        mousePos = camera.ScreenToWorldPoint(mousePos);
+        mousePos = cameras.ScreenToWorldPoint(mousePos);
         Instantiate(coin, mousePos, Quaternion.identity);
     }
 

@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - NestedScrollManager
+  - Note
+  - Border
   layers:
   - Default
   - TransparentFX

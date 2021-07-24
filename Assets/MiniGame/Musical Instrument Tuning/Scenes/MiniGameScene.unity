@@ -226,7 +226,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d4f7f48e457202d44bd78fdd67d595b4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bf052ab604dc87e44ac208b65606cf3c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -357,7 +357,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: f76e239d7d3c04e4bac1e3f93092c8bb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8ef4bf3c2df65004195ba1fac32b4456, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -391,7 +391,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 384204526}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45e02eb33aea6d64e936e3392789b127, type: 3}
+  m_Script: {fileID: 11500000, guid: fddf8541ae0709e41ac6829f8563a738, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   safe_zone: {fileID: 364983246}
@@ -538,7 +538,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 7d70217eb5fde1a47a4d11d70b265eef, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b257fc3a016ad824d965ed2d1e069b85, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -575,7 +575,7 @@ GameObject:
   - component: {fileID: 1334549757}
   - component: {fileID: 1334549756}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Level Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -863,7 +863,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b6018651f7a04164aa5077ac342d4ea1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e430acb5fb89eaf4d8bc803f57fb8334, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
