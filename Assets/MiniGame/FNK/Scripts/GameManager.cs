@@ -208,7 +208,7 @@ public class GameManager : MonoBehaviour
         float duration = 0.6f;
         float offset = (target - current) / duration;
 
-        score += (target - score) + (combo * 2);
+        score += (target - score) + (combo * 3);
 
         while (current < target)
         {
