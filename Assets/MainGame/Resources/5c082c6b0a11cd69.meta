@@ -1,4 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scripts.meta
+guid: 4b458babc8578f045a88ee8bc02b378c
+========
+guid: f5f9294f2809fbc4babce8d0d9b766bb
+>>>>>>>> 3663f83 (d):Assets/MainGame/Resources/5c082c6b0a11cd69.meta
 guid: f5f9294f2809fbc4babce8d0d9b766bb
 folderAsset: yes
 DefaultImporter:
