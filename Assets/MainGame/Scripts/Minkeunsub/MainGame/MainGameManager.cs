@@ -24,24 +24,35 @@ public class MainGameManager : MonoBehaviour
     }
 
     Vector2 mousePos;
-    public Camera cameras;
-    public GameObject coin;
-
+    [Header("objects")]
+    public Camera camera;
+    public GameObject[] coin;
     public bool isCoinIncrease = false;
+    public GameObject particle;
 
     #region circleGauge
+    [Header("circle gauge")]
     public Image circleGauge;
     public float circleDelay;
     public float circleCur;
     public float circleDelayAmount;
+    public float curcleAmount;
     #endregion
 
     #region curCoin
+    [Header("current coin")]
     public TextMeshProUGUI curCoinTxt;
     public float touchCoinAmt;
     public float curCoin;
     public float increaseCoin;
     #endregion
+
+    [Header("upgrade buttons")]
+    public UpgradeBtnBase[] characterUpgrade;
+    public UpgradeBtnBase[] coinUpgrade;
+
+    [Header("Instagram")]
+    public ProfileController profile;
 
     // Start is called before the first frame update
     void Start()
@@ -62,6 +73,15 @@ public class MainGameManager : MonoBehaviour
 
     }
 
+    public void UpgradeLogic()
+    {
+        touchCoinAmt = 300;
+        for (int i = 0; i < characterUpgrade.Length; i++)
+        {
+            touchCoinAmt += characterUpgrade[i].value;
+        }
+    }
+
     void CoinLogic()
     {
         float duration = 0.5f;
@@ -69,7 +89,6 @@ public class MainGameManager : MonoBehaviour
         {
             float offset = (curCoin - increaseCoin) / duration;
             increaseCoin += offset * Time.deltaTime;
-
         }
         else if (increaseCoin > curCoin)
         {
@@ -89,14 +108,33 @@ public class MainGameManager : MonoBehaviour
         circleGauge.fillAmount = circleCur / circleDelay;
         if (circleCur > 0)
             circleCur -= Time.deltaTime * circleDelayAmount;
-        else circleCur = circleDelay;
+        else
+        {
+            TimeCoin();
+            circleCur = circleDelay;
+        }
+
     }
 
     public void ScreenOnClick()
     {
         mousePos = Input.mousePosition;
-        mousePos = cameras.ScreenToWorldPoint(mousePos);
-        Instantiate(coin, mousePos, Quaternion.identity);
+        mousePos = camera.ScreenToWorldPoint(mousePos);
+        int rand = Random.Range(0, coin.Length);
+        Instantiate(coin[rand], mousePos, Quaternion.identity);
+    }
+
+
+    void TimeCoin()
+    {
+        curcleAmount = 10;
+        for (int i = 0; i < coinUpgrade.Length; i++)
+        {
+            curcleAmount += coinUpgrade[i].value;
+        }
+        curCoin += curcleAmount;
+        isCoinIncrease = true;
+        Instantiate(particle, circleGauge.transform.position, Quaternion.identity);
     }
 
 }
