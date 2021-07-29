@@ -143,7 +143,7 @@ public class MainGameManager : MonoBehaviour
 
     void TimeCoin()
     {
-        curcleAmount = 10;
+        curcleAmount = 1000;
         for (int i = 0; i < coinUpgrade.Length; i++)
         {
             if(!coinUpgrade[i].locked)
