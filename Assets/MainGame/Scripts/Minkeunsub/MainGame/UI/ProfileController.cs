@@ -37,6 +37,7 @@ public class ProfileController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        characterPostsSprite = new Sprite[characterPost.Length];
         curPos = this.gameObject.transform.position;
         gameObject.transform.position = Pos.position;
     }
