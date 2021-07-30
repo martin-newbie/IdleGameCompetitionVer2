@@ -38,9 +38,13 @@ public abstract class UpgradeBtnBase : MonoBehaviour
     [Header("variable")]
     public string           btnNameStr;
 
-    protected void Start()
+    protected void Awake()
     {
         locked = true;
+    }
+
+    protected void Start()
+    {
         btnName.text = btnNameStr;
     }
 

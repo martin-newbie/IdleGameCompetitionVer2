@@ -20,7 +20,6 @@ public class ChracterUpgradeButton : UpgradeBtnBase
     [Header("Posts")]
     public Sprite[] characterPostsImg;
 
-
     public override void CharacterController()
     {
         character.SetActive(!locked);
