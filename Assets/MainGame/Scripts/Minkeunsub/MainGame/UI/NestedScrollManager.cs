@@ -9,7 +9,7 @@ public class NestedScrollManager : MonoBehaviour, IBeginDragHandler, IDragHandle
     public Scrollbar scrollbar;
     public Transform contentTr;
 
-    const int SIZE = 4;
+    const int SIZE = 5;
     float[] pos = new float[SIZE];
     float distance, targetpos, curpos;
     bool isDrag;

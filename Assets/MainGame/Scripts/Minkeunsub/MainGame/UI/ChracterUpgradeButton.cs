@@ -17,6 +17,10 @@ public class ChracterUpgradeButton : UpgradeBtnBase
     public int characterFollwer;
     public int characterFollowing;
 
+    [Header("Posts")]
+    public Sprite[] characterPostsImg;
+
+
     public override void CharacterController()
     {
         character.SetActive(!locked);
@@ -31,5 +35,9 @@ public class ChracterUpgradeButton : UpgradeBtnBase
         MainGameManager.Instance.profile.characterPosts = characterPosts;
         MainGameManager.Instance.profile.characterFollwer = characterFollwer;
         MainGameManager.Instance.profile.characterFollowing = characterFollowing;
+        for (int i = 0; i < characterPostsImg.Length; i++)
+        {
+            MainGameManager.Instance.profile.characterPostsSprite[i] = characterPostsImg[i];
+        }
     }
 }
