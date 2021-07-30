@@ -69,13 +69,12 @@ public class MainGameManager : MonoBehaviour
 
     int curMap;
     #endregion
-    // Start is called before the first frame update
     void Start()
     {
+        characterUpgrade[0].locked = false;
         circleCur = circleDelay;
     }
 
-    // Update is called once per frame
     void Update()
     {
         CoinLogic();
