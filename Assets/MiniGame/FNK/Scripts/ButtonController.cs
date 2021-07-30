@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class ButtonController : MonoBehaviour
 {
-    GameManager gameManager;
+    FNK_GameManager gameManager;
     public KeyCode KeyToPress;
     public int Keytype;
 
     void Start()
     {
-        gameManager = FindObjectOfType<GameManager>();
+        gameManager = FindObjectOfType<FNK_GameManager>();
     }
 
     void Awake()
@@ -20,7 +20,7 @@ public class ButtonController : MonoBehaviour
 
     void Update()
     {
-        switch(Keytype)
+        switch (Keytype)
         {
             case 0:
                 if (Input.GetKeyDown(KeyToPress))
@@ -51,5 +51,26 @@ public class ButtonController : MonoBehaviour
                 }
                 break;
         }
+    }
+
+    public void LeftButton()
+    {
+        Debug.Log("left");
+        gameManager.CheakTiming(2);
+    }
+    public void UpButton()
+    {
+        Debug.Log("up");
+        gameManager.CheakTiming(0);
+    }
+    public void DownButton()
+    {
+        Debug.Log("down");
+        gameManager.CheakTiming(1);
+    }
+    public void RightButton()
+    {
+        Debug.Log("right");
+        gameManager.CheakTiming(3);
     }
 }

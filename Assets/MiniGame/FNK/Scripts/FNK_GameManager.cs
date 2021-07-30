@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameManager : MonoBehaviour
+public class FNK_GameManager : MonoBehaviour
 {
     public List<GameObject> NoteList = new List<GameObject>();
 
@@ -197,15 +197,13 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
-        combo = 0;
-        hp -= 5;
         Hit.text = "Miss";
         Debug.Log("miss");
     }
 
     IEnumerator AddScore(float target, float current)
     {
-        float duration = 0.6f;
+        float duration = 0.4f;
         float offset = (target - current) / duration;
 
         score += (target - score) + (combo * 3);

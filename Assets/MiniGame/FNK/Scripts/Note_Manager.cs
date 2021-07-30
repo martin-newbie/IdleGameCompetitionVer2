@@ -16,11 +16,11 @@ public class Note_Manager : MonoBehaviour
     [SerializeField] Transform[] NoteSpawnPoints;
     [SerializeField] GameObject[] Notes;
 
-    GameManager gameManager;
+    FNK_GameManager gameManager;
 
     void Start()
     {
-        gameManager = GetComponent<GameManager>();
+        gameManager = GetComponent<FNK_GameManager>();
     }
 
     void Awake()
