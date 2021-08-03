@@ -71,6 +71,7 @@ public class MainGameManager : MonoBehaviour
     #endregion
     void Start()
     {
+        Save();
         characterUpgrade[0].locked = false;
         circleCur = circleDelay;
     }
@@ -204,4 +205,19 @@ public class MainGameManager : MonoBehaviour
         }
     }
 
+    private void OnDestroy()
+    {
+        PlayerPrefs.SetString("SaveLastTime", System.DateTime.Now.ToString());
+        Debug.Log(System.DateTime.Now.ToString());
+    }
+
+    void Save()
+    {
+        string lastTime = PlayerPrefs.GetString("SaveLastTime");
+        System.DateTime lastDateTime = System.DateTime.Parse(lastTime);
+        System.TimeSpan compareTime = System.DateTime.Now - lastDateTime;
+
+        Debug.Log(System.DateTime.Now.ToString());
+        Debug.LogFormat("{0}", compareTime.TotalSeconds);
+    }
 }
