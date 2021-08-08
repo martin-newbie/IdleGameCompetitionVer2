@@ -7,6 +7,7 @@ public class HitBar : MonoBehaviour
 {
     Vector2 target = new Vector2(2.55f, 0);
 
+
     public Text Level;
     public bool front;
     public float speed = 2.5f;
@@ -15,6 +16,7 @@ public class HitBar : MonoBehaviour
 
     void Start()
     {
+
     }
 
     void Update()
@@ -31,6 +33,13 @@ public class HitBar : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, -target, speed * Time.deltaTime);
 
         Level.text = "Level : " + level;
+
+        Hitspeed();
+
+        if(level > 5)
+        {
+            Debug.Log("You Win");
+        }
     }
 
     void OnTriggerStay2D(Collider2D col)
@@ -41,5 +50,28 @@ public class HitBar : MonoBehaviour
                 level++;
                 Debug.Log("GreenZone");
             }
+    }
+
+    void Hitspeed()
+    {
+        switch(level)
+        {
+            case 1:
+                speed = 2.5f;
+                break;
+            case 2: speed = 3.5f;
+                break;
+            case 3:
+                speed = 4f;
+                break;
+            case 4:
+                speed = 5f;
+                break;
+            case 5:
+                speed = 6f;
+                break;
+            default:
+                break;
+        }
     }
 }
