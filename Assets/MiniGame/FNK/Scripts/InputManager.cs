@@ -1,19 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InputManager : MonoBehaviour
 {
-    [SerializeField] SpriteRenderer sprite;
+    [SerializeField] Image[] image;
 
     float time = 0;
-    float size = 3;
+    float size = 0.8f;
     float UpSizeTime = 0.2f;
-
-    void Start()
-    {
-        sprite = GetComponent<SpriteRenderer>();
-    }
 
     void Update()
     {
@@ -21,17 +17,20 @@ public class InputManager : MonoBehaviour
         {
             time = 0;
         }
-        if (time <= UpSizeTime)
+        for(int i = 0; i < image.Length; i++)
         {
-            sprite.transform.localScale = (Vector3.one / 3) * (1 + size * time);
-        }
-        else if (time <= UpSizeTime * 2)
-        {
-            sprite.transform.localScale = (Vector3.one / 3) * (2 * size * UpSizeTime + 1 - time * size);
-        }
-        else
-        {
-            sprite.transform.localScale = (Vector3.one / 3);
+            if (time <= UpSizeTime)
+            {
+                image[i].transform.localScale = (Vector3.one) * (1 + size * time);
+            }
+            else if (time <= UpSizeTime * 2)
+            {
+                image[i].transform.localScale = (Vector3.one) * (2 * size * UpSizeTime + 1 - time * size);
+            }
+            else
+            {
+                image[i].transform.localScale = (Vector3.one);
+            }
         }
         time += Time.deltaTime;
     }
