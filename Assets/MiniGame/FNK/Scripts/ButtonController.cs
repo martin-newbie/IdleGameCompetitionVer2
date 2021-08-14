@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ButtonController : MonoBehaviour
 {
+    AudioSource audios;
     FNK_GameManager gameManager;
     public KeyCode KeyToPress;
     public int Keytype;
@@ -11,6 +12,7 @@ public class ButtonController : MonoBehaviour
     void Start()
     {
         gameManager = FindObjectOfType<FNK_GameManager>();
+        audios = GetComponent<AudioSource>();
     }
 
     void Awake()
@@ -26,6 +28,7 @@ public class ButtonController : MonoBehaviour
                 if (Input.GetKeyDown(KeyToPress))
                 {
                     Debug.Log("up");
+                    audios.Play();
                     gameManager.CheakTiming(0);
                 }
                 break;
@@ -33,6 +36,7 @@ public class ButtonController : MonoBehaviour
                 if (Input.GetKeyDown(KeyToPress))
                 {
                     Debug.Log("down");
+                    audios.Play();
                     gameManager.CheakTiming(1);
                 }
                 break;
@@ -40,6 +44,7 @@ public class ButtonController : MonoBehaviour
                 if (Input.GetKeyDown(KeyToPress))
                 {
                     Debug.Log("left");
+                    audios.Play();
                     gameManager.CheakTiming(2);
                 }
                 break;
@@ -47,6 +52,7 @@ public class ButtonController : MonoBehaviour
                 if (Input.GetKeyDown(KeyToPress))
                 {
                     Debug.Log("right");
+                    audios.Play();
                     gameManager.CheakTiming(3);
                 }
                 break;

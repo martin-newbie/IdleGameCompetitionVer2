@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class FlameScript : MonoBehaviour
 {
-    AudioSource audio;
+    AudioSource Music;
     bool musicStart = false;
 
     private void Start()
     {
-        audio = GetComponent<AudioSource>();
+        Music = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter2D(Collider2D col)
@@ -18,7 +18,7 @@ public class FlameScript : MonoBehaviour
         {
             if (col.CompareTag("Note"))
             {
-                audio.Play();
+                Music.Play();
                 musicStart = true;
             }
         }
