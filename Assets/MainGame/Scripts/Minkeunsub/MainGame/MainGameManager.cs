@@ -72,8 +72,10 @@ public class MainGameManager : MonoBehaviour
     void Start()
     {
         Save();
-        characterUpgrade[0].locked = false;
+        map1Upgrades[0].GetComponent<UpgradeBtnBase>().locked = false;
+        map2Upgrades[0].GetComponent<UpgradeBtnBase>().locked = false;
         circleCur = circleDelay;
+        MapSelect(0);
     }
 
     void Update()
@@ -86,6 +88,7 @@ public class MainGameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.S))
             curCoin -= touchCoinAmt;
         #endregion
+        MapLogic();
 
     }
 
@@ -160,16 +163,19 @@ public class MainGameManager : MonoBehaviour
         {
             map1Upgrades[j].SetActive(false);
             map1Characters[j].SetActive(false);
+            map1Upgrades[j].GetComponent<ChracterUpgradeButton>().selected = false;
         }
         for (int i = 0; i < map2Upgrades.Length; i++)
         {
             map2Upgrades[i].SetActive(false);
             map2Characters[i].SetActive(false);
+            map2Upgrades[i].GetComponent<ChracterUpgradeButton>().selected = false;
         }
         for (int i = 0; i < map3Upgrades.Length; i++)
         {
             map3Upgrades[i].SetActive(false);
             map3Characters[i].SetActive(false);
+            map3Upgrades[i].GetComponent<ChracterUpgradeButton>().selected = false;
         }
         curMap = n;
     }
@@ -183,7 +189,7 @@ public class MainGameManager : MonoBehaviour
                 for (int j = 0; j < map1Upgrades.Length; j++)
                 {
                     map1Upgrades[j].SetActive(true);
-                    map1Characters[j].SetActive(true);
+                    map1Upgrades[j].GetComponent<ChracterUpgradeButton>().selected = true;
                 }
                 break;
             case 1:
@@ -191,7 +197,7 @@ public class MainGameManager : MonoBehaviour
                 for (int i = 0; i < map2Upgrades.Length; i++)
                 {
                     map2Upgrades[i].SetActive(true);
-                    map2Characters[i].SetActive(true);
+                    map2Upgrades[i].GetComponent<ChracterUpgradeButton>().selected = true;
                 }
                 break;
             case 2:
@@ -199,7 +205,7 @@ public class MainGameManager : MonoBehaviour
                 for (int i = 0; i < map3Upgrades.Length; i++)
                 {
                     map3Upgrades[i].SetActive(true);
-                    map3Characters[i].SetActive(true);
+                    map3Upgrades[i].GetComponent<ChracterUpgradeButton>().selected = true;
                 }
                 break;
         }

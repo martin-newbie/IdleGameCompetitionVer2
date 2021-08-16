@@ -20,9 +20,12 @@ public class ChracterUpgradeButton : UpgradeBtnBase
     [Header("Posts")]
     public Sprite[] characterPostsImg;
 
+    [HideInInspector] public bool selected;
+
     public override void CharacterController()
     {
-        character.SetActive(!locked);
+        if (selected)
+            character.SetActive(!locked);
     }
 
     public void ProfileBtn()
