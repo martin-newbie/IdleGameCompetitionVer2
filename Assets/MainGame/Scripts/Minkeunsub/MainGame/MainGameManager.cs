@@ -50,6 +50,7 @@ public class MainGameManager : MonoBehaviour
     [Header("upgrade buttons")]
     public UpgradeBtnBase[] characterUpgrade;
     public UpgradeBtnBase[] coinUpgrade;
+    public TextMeshProUGUI curTouchCointxt;
 
     [Header("Instagram")]
     public ProfileController profile;
@@ -66,8 +67,10 @@ public class MainGameManager : MonoBehaviour
     public GameObject[] map1Characters;
     public GameObject[] map2Characters;
     public GameObject[] map3Characters;
-
+    [Header("Locked")]
+    public bool[] mapUnlocked;
     int curMap;
+    int lockMap;
     #endregion
     void Start()
     {
@@ -76,6 +79,9 @@ public class MainGameManager : MonoBehaviour
         map2Upgrades[0].GetComponent<UpgradeBtnBase>().locked = false;
         circleCur = circleDelay;
         MapSelect(0);
+        UpgradeLogic();
+        mapUnlocked[0] = true;
+        curMap = 0;
     }
 
     void Update()
@@ -97,9 +103,12 @@ public class MainGameManager : MonoBehaviour
         touchCoinAmt = 300;
         for (int i = 0; i < characterUpgrade.Length; i++)
         {
+            characterUpgrade[i].gameObject.SetActive(true);
             if(!characterUpgrade[i].locked)
                 touchCoinAmt += characterUpgrade[i].value;
+            characterUpgrade[i].gameObject.SetActive(false);
         }
+        curTouchCointxt.text = touchCoinAmt.ToString();
     }
 
     void CoinLogic()
@@ -159,6 +168,8 @@ public class MainGameManager : MonoBehaviour
 
     public void MapSelect(int n)
     {
+        lockMap = n;
+        if (mapUnlocked[lockMap]) curMap = lockMap;
         for (int j = 0; j < map1Upgrades.Length; j++)
         {
             map1Upgrades[j].SetActive(false);
@@ -177,38 +188,41 @@ public class MainGameManager : MonoBehaviour
             map3Characters[i].SetActive(false);
             map3Upgrades[i].GetComponent<ChracterUpgradeButton>().selected = false;
         }
-        curMap = n;
     }
 
     void MapLogic()
     {
-        switch(curMap)
+        if(mapUnlocked[curMap])
         {
-            case 0:
-                mapImg.sprite = mapImgs[0];
-                for (int j = 0; j < map1Upgrades.Length; j++)
-                {
-                    map1Upgrades[j].SetActive(true);
-                    map1Upgrades[j].GetComponent<ChracterUpgradeButton>().selected = true;
-                }
-                break;
-            case 1:
-                mapImg.sprite = mapImgs[1];
-                for (int i = 0; i < map2Upgrades.Length; i++)
-                {
-                    map2Upgrades[i].SetActive(true);
-                    map2Upgrades[i].GetComponent<ChracterUpgradeButton>().selected = true;
-                }
-                break;
-            case 2:
-                mapImg.sprite = mapImgs[2];
-                for (int i = 0; i < map3Upgrades.Length; i++)
-                {
-                    map3Upgrades[i].SetActive(true);
-                    map3Upgrades[i].GetComponent<ChracterUpgradeButton>().selected = true;
-                }
-                break;
+            switch (curMap)
+            {
+                case 0:
+                    mapImg.sprite = mapImgs[0];
+                    for (int j = 0; j < map1Upgrades.Length; j++)
+                    {
+                        map1Upgrades[j].SetActive(true);
+                        map1Upgrades[j].GetComponent<ChracterUpgradeButton>().selected = true;
+                    }
+                    break;
+                case 1:
+                    mapImg.sprite = mapImgs[1];
+                    for (int i = 0; i < map2Upgrades.Length; i++)
+                    {
+                        map2Upgrades[i].SetActive(true);
+                        map2Upgrades[i].GetComponent<ChracterUpgradeButton>().selected = true;
+                    }
+                    break;
+                case 2:
+                    mapImg.sprite = mapImgs[2];
+                    for (int i = 0; i < map3Upgrades.Length; i++)
+                    {
+                        map3Upgrades[i].SetActive(true);
+                        map3Upgrades[i].GetComponent<ChracterUpgradeButton>().selected = true;
+                    }
+                    break;
+            }
         }
+        
     }
 
     private void OnDestroy()
@@ -225,5 +239,14 @@ public class MainGameManager : MonoBehaviour
 
         Debug.Log(System.DateTime.Now.ToString());
         Debug.LogFormat("{0}", compareTime.TotalSeconds);
+    }
+
+    public void MapBuy(int cost)
+    {
+        if(cost <= curCoin && !mapUnlocked[lockMap])
+        {
+            curCoin -= cost;
+            mapUnlocked[lockMap] = true;
+        }
     }
 }
