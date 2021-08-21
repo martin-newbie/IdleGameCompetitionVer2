@@ -11,6 +11,7 @@ public class Note_Manager : MonoBehaviour
     public List<Spawn> spawn_list;
 
     public bool SpawnEnd;
+    bool start = false;
     public int spawnIndex;
 
     [SerializeField] Transform[] NoteSpawnPoints;
@@ -31,7 +32,11 @@ public class Note_Manager : MonoBehaviour
 
     void Update()
     {
-        curTime += Time.deltaTime;
+        if(start)
+            curTime += Time.deltaTime;
+
+        if(Input.anyKeyDown)
+            start = true;
 
         if (!SpawnEnd)
         {

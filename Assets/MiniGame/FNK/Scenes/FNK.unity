@@ -2434,7 +2434,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bpm: 120
   type: 0
-  SpawnEnd: 0
+  SpawnEnd: 1
   spawnIndex: 0
   NoteSpawnPoints:
   - {fileID: 429243898}
