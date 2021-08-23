@@ -37,7 +37,7 @@ public class FNK_GameManager : MonoBehaviour
     {
         if (hp > maxhp)
             hp = maxhp;
-        Hp.fillAmount = Mathf.Lerp(Hp.fillAmount, hp / maxhp, Time.deltaTime*5);
+        Hp.fillAmount = Mathf.Lerp(Hp.fillAmount, hp / maxhp, Time.deltaTime * 5);
     }
 
     public void CheakTiming(int type)
