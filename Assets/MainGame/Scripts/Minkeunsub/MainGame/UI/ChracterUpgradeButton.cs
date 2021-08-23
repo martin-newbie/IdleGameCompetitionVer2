@@ -24,6 +24,7 @@ public class ChracterUpgradeButton : UpgradeBtnBase
 
     public override void CharacterController()
     {
+        characterUnlocked = characterSprite;
         if (selected)
             character.SetActive(!locked);
     }
