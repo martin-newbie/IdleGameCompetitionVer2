@@ -9,6 +9,8 @@ public class NestedScrollManager : MonoBehaviour, IBeginDragHandler, IDragHandle
     public Scrollbar scrollbar;
     public Transform contentTr;
 
+    public AudioClip touchClip;
+
     const int SIZE = 5;
     float[] pos = new float[SIZE];
     float distance, targetpos, curpos;
@@ -73,5 +75,6 @@ public class NestedScrollManager : MonoBehaviour, IBeginDragHandler, IDragHandle
     {
         targetIndex = n;
         targetpos = pos[n];
+        MainGameManager.Instance.SM.SfxPlay("touch", touchClip);
     }
 }

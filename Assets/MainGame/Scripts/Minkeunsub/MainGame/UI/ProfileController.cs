@@ -38,7 +38,7 @@ public class ProfileController : MonoBehaviour
     void Start()
     {
         characterPostsSprite = new Sprite[characterPost.Length];
-        curPos = this.gameObject.transform.position;
+        curPos = Vector3.zero;
         gameObject.transform.position = Pos.position;
     }
 

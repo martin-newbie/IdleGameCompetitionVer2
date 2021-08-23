@@ -20,10 +20,10 @@ public class CoinCal : MonoBehaviour
         }
     }
 
-    public string GetCoinText(float amount)
+    public string GetCoinText(BigInteger amount)
     {
-        int placeN = 3;
-        BigInteger value = (BigInteger)amount;
+        int placeN = 2;
+        BigInteger value = amount;
         List<int> numList = new List<int>();
         int p = (int)Mathf.Pow(10, placeN);
 

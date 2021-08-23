@@ -3,6 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
+using System.Numerics;
+
+public enum MapEnum
+{
+    Orchestra,
+    Jazz,
+    Band
+}
 
 public class MainGameManager : MonoBehaviour
 {
@@ -23,12 +32,16 @@ public class MainGameManager : MonoBehaviour
         }
     }
 
-    Vector2 mousePos;
+
+    public MapEnum curMap;
+
+    UnityEngine.Vector2 mousePos;
     [Header("objects")]
     public Camera mainCamera;
     public GameObject[] coin;
     public bool isCoinIncrease = false;
     public GameObject particle;
+    public SoundManager SM;
 
     #region circleGauge
     [Header("circle gauge")]
@@ -36,15 +49,15 @@ public class MainGameManager : MonoBehaviour
     public float circleDelay;
     public float circleCur;
     public float circleDelayAmount;
-    public float curcleAmount;
+    public BigInteger curcleAmount;
     #endregion
 
     #region curCoin
     [Header("current coin")]
     public TextMeshProUGUI curCoinTxt;
-    public float touchCoinAmt;
-    public float curCoin;
-    public float increaseCoin;
+    public BigInteger touchCoinAmt;
+    public BigInteger curCoin;
+    public BigInteger increaseCoin;
     #endregion
 
     [Header("upgrade buttons")]
@@ -69,19 +82,18 @@ public class MainGameManager : MonoBehaviour
     public GameObject[] map3Characters;
     [Header("Locked")]
     public bool[] mapUnlocked;
-    int curMap;
     int lockMap;
     #endregion
     void Start()
     {
-        Save();
         map1Upgrades[0].GetComponent<UpgradeBtnBase>().locked = false;
-        map2Upgrades[0].GetComponent<UpgradeBtnBase>().locked = false;
         circleCur = circleDelay;
         MapSelect(0);
         UpgradeLogic();
+        TimeCoin();
         mapUnlocked[0] = true;
         curMap = 0;
+        Save();
     }
 
     void Update()
@@ -93,42 +105,47 @@ public class MainGameManager : MonoBehaviour
         #region coinTest
         if (Input.GetKeyDown(KeyCode.S))
             curCoin -= touchCoinAmt;
+        if (Input.GetKeyDown(KeyCode.A))
+            curCoin += touchCoinAmt * 10000;
         #endregion
         MapLogic();
 
+        if (mapUnlocked[1]) map2Upgrades[0].GetComponent<UpgradeBtnBase>().locked = false;
+        if (mapUnlocked[2]) map3Upgrades[0].GetComponent<UpgradeBtnBase>().locked = false;
     }
 
     public void UpgradeLogic()
     {
-        touchCoinAmt = 300;
+        touchCoinAmt = 50;
         for (int i = 0; i < characterUpgrade.Length; i++)
         {
             characterUpgrade[i].gameObject.SetActive(true);
-            if(!characterUpgrade[i].locked)
-                touchCoinAmt += characterUpgrade[i].value;
+            if (!characterUpgrade[i].locked)
+                touchCoinAmt += (BigInteger)characterUpgrade[i].value;
             characterUpgrade[i].gameObject.SetActive(false);
         }
         curTouchCointxt.text = touchCoinAmt.ToString();
+
     }
 
     void CoinLogic()
     {
-        float duration = 0.5f;
         if (increaseCoin < curCoin)
         {
-            float offset = (curCoin - increaseCoin) / duration;
-            increaseCoin += offset * Time.deltaTime;
+            BigInteger offset = curCoin - increaseCoin;
+            increaseCoin += (offset * (int)(Time.deltaTime * 1000000)) / 4000000;
         }
         else if (increaseCoin > curCoin)
         {
-            float offset = (increaseCoin - curCoin) / duration;
-            increaseCoin -= offset * Time.deltaTime;
+            BigInteger offset = increaseCoin - curCoin;
+            increaseCoin -= (offset * (int)(Time.deltaTime * 1000000)) / 4000000;
         }
 
-        if (Mathf.Abs(curCoin - increaseCoin) < 0.5)
+        if (Mathf.Abs((float)(curCoin - increaseCoin)) < 0.5)
             increaseCoin = curCoin;
 
-        int TmpIncreaseCoin = (int)increaseCoin;
+        BigInteger TmpIncreaseCoin = increaseCoin;
+
         curCoinTxt.text = CoinCal.Instance.GetCoinText(TmpIncreaseCoin);
     }
 
@@ -150,26 +167,30 @@ public class MainGameManager : MonoBehaviour
         mousePos = Input.mousePosition;
         mousePos = mainCamera.ScreenToWorldPoint(mousePos);
         int rand = Random.Range(0, coin.Length);
-        Instantiate(coin[rand], mousePos, Quaternion.identity);
+        Instantiate(coin[rand], mousePos, UnityEngine.Quaternion.identity);
     }
 
     void TimeCoin()
     {
-        curcleAmount = 1000;
+        curcleAmount = 100;
         for (int i = 0; i < coinUpgrade.Length; i++)
         {
-            if(!coinUpgrade[i].locked)
+            if (!coinUpgrade[i].locked)
                 curcleAmount += coinUpgrade[i].value;
         }
         curCoin += curcleAmount;
         isCoinIncrease = true;
-        Instantiate(particle, circleGauge.transform.position, Quaternion.identity);
+        Instantiate(particle, circleGauge.transform.position, UnityEngine.Quaternion.identity);
     }
 
     public void MapSelect(int n)
     {
         lockMap = n;
-        if (mapUnlocked[lockMap]) curMap = lockMap;
+        if (mapUnlocked[lockMap])
+        {
+            curMap = (MapEnum)lockMap;
+            SM.BackgroundSfx();
+        }
         for (int j = 0; j < map1Upgrades.Length; j++)
         {
             map1Upgrades[j].SetActive(false);
@@ -192,11 +213,11 @@ public class MainGameManager : MonoBehaviour
 
     void MapLogic()
     {
-        if(mapUnlocked[curMap])
+        if (mapUnlocked[(int)curMap])
         {
             switch (curMap)
             {
-                case 0:
+                case MapEnum.Orchestra:
                     mapImg.sprite = mapImgs[0];
                     for (int j = 0; j < map1Upgrades.Length; j++)
                     {
@@ -204,7 +225,7 @@ public class MainGameManager : MonoBehaviour
                         map1Upgrades[j].GetComponent<ChracterUpgradeButton>().selected = true;
                     }
                     break;
-                case 1:
+                case MapEnum.Band:
                     mapImg.sprite = mapImgs[1];
                     for (int i = 0; i < map2Upgrades.Length; i++)
                     {
@@ -212,7 +233,7 @@ public class MainGameManager : MonoBehaviour
                         map2Upgrades[i].GetComponent<ChracterUpgradeButton>().selected = true;
                     }
                     break;
-                case 2:
+                case MapEnum.Jazz:
                     mapImg.sprite = mapImgs[2];
                     for (int i = 0; i < map3Upgrades.Length; i++)
                     {
@@ -222,7 +243,7 @@ public class MainGameManager : MonoBehaviour
                     break;
             }
         }
-        
+
     }
 
     private void OnDestroy()
@@ -237,16 +258,22 @@ public class MainGameManager : MonoBehaviour
         System.DateTime lastDateTime = System.DateTime.Parse(lastTime);
         System.TimeSpan compareTime = System.DateTime.Now - lastDateTime;
 
-        Debug.Log(System.DateTime.Now.ToString());
-        Debug.LogFormat("{0}", compareTime.TotalSeconds);
+        var idleTime = compareTime.TotalSeconds / circleDelay;
+        curCoin += (int)(idleTime * 10) * curcleAmount / 10;
+        Debug.Log((int)(idleTime * 10) * curcleAmount / 10);
     }
 
     public void MapBuy(int cost)
     {
-        if(cost <= curCoin && !mapUnlocked[lockMap])
+        if (cost <= curCoin && !mapUnlocked[lockMap])
         {
             curCoin -= cost;
             mapUnlocked[lockMap] = true;
         }
+    }
+
+    public void MinigameMove(string scenename)
+    {
+        SceneManager.LoadScene(scenename);
     }
 }
