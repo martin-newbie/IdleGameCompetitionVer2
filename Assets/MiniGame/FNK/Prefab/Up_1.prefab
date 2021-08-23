@@ -96,6 +96,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84319fc6a325ef543a30a80e93904f78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
+  isAnim: 1
   speed: 3
   Notetype: 0
 --- !u!61 &7066408629537784456

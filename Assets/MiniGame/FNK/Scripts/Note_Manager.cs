@@ -11,32 +11,29 @@ public class Note_Manager : MonoBehaviour
     public List<Spawn> spawn_list;
 
     public bool SpawnEnd;
-    bool start = false;
     public int spawnIndex;
 
     [SerializeField] Transform[] NoteSpawnPoints;
     [SerializeField] GameObject[] Notes;
 
+    SelectMusic selectMusic;
     FNK_GameManager gameManager;
 
-    void Start()
+    private void Start()
     {
         gameManager = GetComponent<FNK_GameManager>();
+        selectMusic = FindObjectOfType<SelectMusic>();
+        ReadSpawnFile();
     }
 
     void Awake()
     {
         spawn_list = new List<Spawn>();
-        ReadSpawnFile();
     }
 
     void Update()
     {
-        if(start)
-            curTime += Time.deltaTime;
-
-        if(Input.anyKeyDown)
-            start = true;
+        curTime += Time.deltaTime;
 
         if (!SpawnEnd)
         {
@@ -73,7 +70,22 @@ public class Note_Manager : MonoBehaviour
         spawnIndex = 0;
         SpawnEnd = false;
 
-        TextAsset textFile = Resources.Load("Spawn") as TextAsset;
+        string Music = "";
+
+        switch (selectMusic.Music)
+        {
+            case 0:
+                Music = "GoRock";
+                break;
+            case 1:
+                Music = "TheHunter";
+                break;
+            case 2:
+                Music = "Cantina";
+                break;
+        }
+
+        TextAsset textFile = Resources.Load(Music) as TextAsset;
         StringReader Reader = new StringReader(textFile.text);
 
         while (Reader != null)
