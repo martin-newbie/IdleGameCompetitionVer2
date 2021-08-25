@@ -57,7 +57,6 @@ public class Note_Manager : MonoBehaviour
         if (col.CompareTag("Note"))
         {
             gameManager.combo = 0;
-            gameManager.Hit.text = "Miss";
             gameManager.hp -= 10;
             gameManager.NoteList.Remove(col.gameObject);
             Destroy(col.gameObject);

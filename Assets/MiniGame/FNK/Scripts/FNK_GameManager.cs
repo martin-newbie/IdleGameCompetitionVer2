@@ -12,7 +12,6 @@ public class FNK_GameManager : MonoBehaviour
     [SerializeField] Transform Down = null;
     [SerializeField] Transform Left = null;
     [SerializeField] Transform Right = null;
-    public Text Hit;
     [SerializeField] Text Score;
     public Image Hp;
 
@@ -61,25 +60,21 @@ public class FNK_GameManager : MonoBehaviour
                                 switch (y)
                                 {
                                     case 0:
-                                        Hit.text = "Perfect";
                                         combo++;
                                         hp += 5;
                                         StartCoroutine(AddScore(score + 300, score));
                                         break;
                                     case 1:
-                                        Hit.text = "Cool";
                                         combo++;
                                         hp += 3;
                                         StartCoroutine(AddScore(score + 200, score));
                                         break;
                                     case 2:
-                                        Hit.text = "Good";
                                         combo++;
                                         hp += 2;
                                         StartCoroutine(AddScore(score + 100, score));
                                         break;
                                     case 3:
-                                        Hit.text = "Bad";
                                         combo++;
                                         hp += 1;
                                         StartCoroutine(AddScore(score + 50, score));
@@ -96,25 +91,21 @@ public class FNK_GameManager : MonoBehaviour
                                 switch (y)
                                 {
                                     case 0:
-                                        Hit.text = "Perfect";
                                         combo++;
                                         hp += 5;
                                         StartCoroutine(AddScore(score + 300, score));
                                         break;
                                     case 1:
-                                        Hit.text = "Cool";
                                         combo++;
                                         hp += 3;
                                         StartCoroutine(AddScore(score + 200, score));
                                         break;
                                     case 2:
-                                        Hit.text = "Good";
                                         combo++;
                                         hp += 2;
                                         StartCoroutine(AddScore(score + 100, score));
                                         break;
                                     case 3:
-                                        Hit.text = "Bad";
                                         combo++;
                                         hp += 1;
                                         StartCoroutine(AddScore(score + 50, score));
@@ -131,25 +122,21 @@ public class FNK_GameManager : MonoBehaviour
                                 switch (y)
                                 {
                                     case 0:
-                                        Hit.text = "Perfect";
                                         combo++;
                                         hp += 5;
                                         StartCoroutine(AddScore(score + 300, score));
                                         break;
                                     case 1:
-                                        Hit.text = "Cool";
                                         combo++;
                                         hp += 3;
                                         StartCoroutine(AddScore(score + 200, score));
                                         break;
                                     case 2:
-                                        Hit.text = "Good";
                                         combo++;
                                         hp += 2;
                                         StartCoroutine(AddScore(score + 100, score));
                                         break;
                                     case 3:
-                                        Hit.text = "Bad";
                                         combo++;
                                         hp += 1;
                                         StartCoroutine(AddScore(score + 50, score));
@@ -166,25 +153,21 @@ public class FNK_GameManager : MonoBehaviour
                                 switch (y)
                                 {
                                     case 0:
-                                        Hit.text = "Perfect";
                                         combo++;
                                         hp += 5;
                                         StartCoroutine(AddScore(score + 300, score));
                                         break;
                                     case 1:
-                                        Hit.text = "Cool";
                                         combo++;
                                         hp += 3;
                                         StartCoroutine(AddScore(score + 200, score));
                                         break;
                                     case 2:
-                                        Hit.text = "Good";
                                         combo++;
                                         hp += 2;
                                         StartCoroutine(AddScore(score + 100, score));
                                         break;
                                     case 3:
-                                        Hit.text = "Bad";
                                         combo++;
                                         hp += 1;
                                         StartCoroutine(AddScore(score + 50, score));
@@ -197,7 +180,6 @@ public class FNK_GameManager : MonoBehaviour
                 }
             }
         }
-        Hit.text = "Miss";
         Debug.Log("miss");
     }
 
