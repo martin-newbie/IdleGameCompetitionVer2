@@ -7,6 +7,7 @@ public class Note_Manager : MonoBehaviour
 {
     public int bpm = 0;
     public int type;
+    public int type2;
     double curTime = 0d;
     public List<Spawn> spawn_list;
 
@@ -37,8 +38,14 @@ public class Note_Manager : MonoBehaviour
 
         if (!SpawnEnd)
         {
-            if (curTime >= 60d / spawn_list[spawnIndex].bpm)
+            if (curTime >= 100d / spawn_list[spawnIndex].bpm)
             {
+                if(spawn_list[spawnIndex].type2!= 4)
+                {
+                    GameObject Note2 = Instantiate(Notes[spawn_list[spawnIndex].type2], NoteSpawnPoints[spawn_list[spawnIndex].type2].position, Quaternion.identity);
+                    gameManager.NoteList.Add(Note2);
+                }
+
                 GameObject Note = Instantiate(Notes[spawn_list[spawnIndex].type], NoteSpawnPoints[spawn_list[spawnIndex].type].position, Quaternion.identity);
                 gameManager.NoteList.Add(Note);
                 spawnIndex++;
@@ -47,7 +54,7 @@ public class Note_Manager : MonoBehaviour
                     SpawnEnd = true;
                     return;
                 }
-                curTime -= 60d / spawn_list[spawnIndex].bpm;
+                curTime -= 100d / spawn_list[spawnIndex].bpm;
             }
         }
     }
@@ -98,6 +105,7 @@ public class Note_Manager : MonoBehaviour
             Spawn spawnData = new Spawn();
             spawnData.bpm = int.Parse(line.Split(',')[0]);
             spawnData.type = int.Parse(line.Split(',')[1]);
+            spawnData.type2 = int.Parse(line.Split(',')[2]);
 
             spawn_list.Add(spawnData);
         }

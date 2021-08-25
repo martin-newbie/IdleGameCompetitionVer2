@@ -6,4 +6,5 @@ public class Spawn
 {
     public int bpm;
     public int type;
+    public int type2;
 }
