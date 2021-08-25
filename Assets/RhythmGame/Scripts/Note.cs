@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Note : MonoBehaviour
 {
-    public float NoteSpeed = 7000;
+    public float speed;
+    public int Notetype;
+
     void Update()
     {
-       // GameObject.FindWithTag("Note");
-        transform.localPosition += Vector3.down * NoteSpeed * Time.deltaTime;
+        transform.position -= Vector3.up * speed * Time.deltaTime;
     }
 }

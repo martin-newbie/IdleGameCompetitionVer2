@@ -913,7 +913,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: RhythmGame
+          m_StringArgument: MusicSelect
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &65701589
@@ -12703,7 +12703,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1614800884}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.19818252
+  m_Size: 0.19818254
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -15035,8 +15035,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 571038011}
   m_HandleRect: {fileID: 571038010}
   m_Direction: 2
-  m_Value: 1.0000008
-  m_Size: 0.6411444
+  m_Value: 1.0000011
+  m_Size: 0.64114445
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
