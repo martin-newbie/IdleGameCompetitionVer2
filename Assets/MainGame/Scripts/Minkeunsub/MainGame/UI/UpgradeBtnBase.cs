@@ -98,12 +98,12 @@ public abstract class UpgradeBtnBase : MonoBehaviour
         tCost = PlayerPrefs.GetString(saveName + "cost");
         locked = PlayerPrefs.GetInt(saveName + "locked") == 0;
         if (tLevel != 0) level = tLevel;
-        if (tValue != null)
+        if (tValue != "")
         {
             value = new BigInteger(System.Convert.ToInt32(tValue));
         }
         else value = I_value;
-        if (tCost != null) cost = new BigInteger(System.Convert.ToInt32(tCost));
+        if (tCost != "") cost = new BigInteger(System.Convert.ToInt32(tCost));
         else cost = I_cost;
     }
 
