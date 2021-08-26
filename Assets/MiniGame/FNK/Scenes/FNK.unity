@@ -2505,6 +2505,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bpm: 120
   type: 0
+  type2: 0
   SpawnEnd: 1
   spawnIndex: 0
   NoteSpawnPoints:
@@ -2530,7 +2531,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 5.31}
+  m_Offset: {x: 0, y: 5.07}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
