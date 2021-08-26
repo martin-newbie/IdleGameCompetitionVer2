@@ -14,22 +14,29 @@ public class MusicSelect : MonoBehaviour
     public void GoMainGame()
     {
         SceneManager.LoadScene("MainGame");
+        Destroy(gameObject);
+    }
+    public void LoadGame()
+    {
+        SceneManager.LoadScene("RhythmGame");
     }
 
     public void SelectMusic1()
     {
         MusicNumber = 1;
-        SceneManager.LoadScene("RhythmGame");
+        LoadGame();
     }
 
     public void SelectMusic2()
     {
         MusicNumber = 2;
-        SceneManager.LoadScene("RhythmGame");
+        LoadGame();
     }
     public void SelectMusic3()
     {
         MusicNumber = 3;
-        SceneManager.LoadScene("RhythmGame");
+        LoadGame();
     }
+
+
 }

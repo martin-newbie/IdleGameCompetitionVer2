@@ -14,6 +14,7 @@ public class Tuning : MonoBehaviour
     bool isSelect2 = false;
 
     public Text TimerText;
+
     private float Timer;
 
     public GameObject Button1;
@@ -24,6 +25,9 @@ public class Tuning : MonoBehaviour
 
     public bool isDone1 = false;
     public bool isDone2 = false;
+
+    bool Success1 = false;
+    bool Success2 = false;
 
     public float Win1;
     public float Win2;
@@ -36,6 +40,18 @@ public class Tuning : MonoBehaviour
 
     public bool GameWin = false;
 
+    public float Tuning_Score = 0;
+
+    float Score = 0;
+
+    public AudioSource Tuning_Success;
+
+    //public GameObject Continue_parent;
+    public GameObject Continue_Button;
+
+    public bool SpawnOnce = true;
+
+    bool State;
 
     private void Awake()
     {
@@ -44,11 +60,16 @@ public class Tuning : MonoBehaviour
         Win2 = Random.Range(0, 360);
         Obj1.eulerAngles = new Vector3(0, 0, Win1);
         Obj2.eulerAngles = new Vector3(0, 0, Win2);
-        Timer = 10f;
+        Timer = 8f;
+
+        Score = Random.Range(100, 200);
     }
 
+    private void Start()
+    {
+        State = false;
+    }
 
-    // Update is called once per frame
     void Update()
     {
         CurRot1 = Button1.transform.eulerAngles.z;
@@ -62,6 +83,8 @@ public class Tuning : MonoBehaviour
         TimerCount();
 
         WinRequire();
+
+        GameEnd();
 
         if (isDone1 == false)
         {
@@ -91,6 +114,7 @@ public class Tuning : MonoBehaviour
         if(isDone1==true&&isDone2==true)
         {
             GameWin = true;
+            State = true;
         }
 
     }
@@ -99,7 +123,6 @@ public class Tuning : MonoBehaviour
         MousePos = Input.mousePosition;
         TransPos = Camera.main.ScreenToWorldPoint(MousePos);
         Rot = Mathf.Atan2(TransPos.y - TargetPos.y, TransPos.x - TargetPos.x) * Mathf.Rad2Deg;
-        Debug.Log("각도 구함");
     }
 
     public void TuningRot()
@@ -131,6 +154,23 @@ public class Tuning : MonoBehaviour
             isDone2 = true;
             //isSelect = false;
         }
+
+        if (Success1 == false) 
+        {
+            if (isDone1 == true)
+            {
+                Tuning_Success.Play();
+                Success1 = true;
+            }
+        }
+        if (Success2 == false)
+        {
+            if (isDone2 == true)
+            {
+                Tuning_Success.Play();
+                Success2 = true;
+            }
+        }
     }
 
     public void SelectTun1()
@@ -155,17 +195,42 @@ public class Tuning : MonoBehaviour
             TimerText.text = Mathf.Ceil(Timer).ToString();
         }
 
-        if(Timer == 0)
+        if(Timer < 0)
         {
             TimerText.text = "Lose";
-            Time.timeScale = 0;
+            isSelect = false;
+            isSelect2 = false;
+
+            Tuning_Score = Score;
         }
 
         if(GameWin==true)
         {
-            TimerText.text = "Win";
-            
+            if(SpawnOnce==true)
+            {
+                TimerText.text = "Win";
+
+                Tuning_Score = Score * Timer;
+            }
+
+
         }
     }
 
+    public void GameEnd()
+    {
+        if(SpawnOnce==true)
+        {
+            if (GameWin == true || Timer < 0)
+            {
+                Continue_Button.gameObject.SetActive(true);
+                SpawnOnce = false;
+            }
+        }
+
+        if(State==false)
+        {
+            Continue_Button.gameObject.SetActive(false);
+        }
+    }
 }
