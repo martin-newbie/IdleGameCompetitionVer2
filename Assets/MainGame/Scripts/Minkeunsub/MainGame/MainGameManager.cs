@@ -63,7 +63,6 @@ public class MainGameManager : MonoBehaviour
     [Header("upgrade buttons")]
     public UpgradeBtnBase[] characterUpgrade;
     public UpgradeBtnBase[] coinUpgrade;
-    public TextMeshProUGUI curTouchCointxt;
 
     [Header("Instagram")]
     public ProfileController profile;
@@ -93,6 +92,7 @@ public class MainGameManager : MonoBehaviour
         TimeCoin();
         mapUnlocked[0] = true;
         curMap = 0;
+        CoinLoad();
         Save();
     }
 
@@ -114,6 +114,20 @@ public class MainGameManager : MonoBehaviour
         if (mapUnlocked[2]) map3Upgrades[0].GetComponent<UpgradeBtnBase>().locked = false;
     }
 
+    void CoinSave()
+    {
+        PlayerPrefs.SetString("curcoin", curCoin.ToString());
+    }
+
+    void CoinLoad()
+    {
+        if (PlayerPrefs.GetString("curcoin") != "")
+        {
+            curCoin = BigInteger.Parse(PlayerPrefs.GetString("curcoin"));
+            increaseCoin = curCoin;
+        }
+    }
+
     public void UpgradeLogic()
     {
         touchCoinAmt = 50;
@@ -124,7 +138,6 @@ public class MainGameManager : MonoBehaviour
                 touchCoinAmt += (BigInteger)characterUpgrade[i].value;
             characterUpgrade[i].gameObject.SetActive(false);
         }
-        curTouchCointxt.text = touchCoinAmt.ToString();
 
     }
 
@@ -248,6 +261,7 @@ public class MainGameManager : MonoBehaviour
 
     private void OnDestroy()
     {
+        CoinSave();
         PlayerPrefs.SetString("SaveLastTime", System.DateTime.Now.ToString());
         Debug.Log(System.DateTime.Now.ToString());
     }
@@ -260,6 +274,7 @@ public class MainGameManager : MonoBehaviour
 
         var idleTime = compareTime.TotalSeconds / circleDelay;
         curCoin += (int)(idleTime * 10) * curcleAmount / 10;
+        increaseCoin = curCoin;
         Debug.Log((int)(idleTime * 10) * curcleAmount / 10);
     }
 
