@@ -6,7 +6,7 @@ public class FlameScript : MonoBehaviour
 {
     SelectMusic selectMusic;
 
-    AudioSource Music;
+    public AudioSource Music;
     [SerializeField] AudioClip[] audios;
 
     bool musicStart = false;

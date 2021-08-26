@@ -11,6 +11,7 @@ public class Note_Manager : MonoBehaviour
     double curTime = 0d;
     public List<Spawn> spawn_list;
 
+    public bool SongEnd = false;
     public bool SpawnEnd;
     public int spawnIndex;
 
@@ -38,24 +39,28 @@ public class Note_Manager : MonoBehaviour
 
         if (!SpawnEnd)
         {
-            if (curTime >= 100d / spawn_list[spawnIndex].bpm)
+            if(!SongEnd)
             {
-                if(spawn_list[spawnIndex].type2!= 4)
+                if (curTime >= 100d / spawn_list[spawnIndex].bpm)
                 {
-                    GameObject Note2 = Instantiate(Notes[spawn_list[spawnIndex].type2], NoteSpawnPoints[spawn_list[spawnIndex].type2].position, Quaternion.identity);
-                    gameManager.NoteList.Add(Note2);
-                }
+                    if (spawn_list[spawnIndex].type2 != 4)
+                    {
+                        GameObject Note2 = Instantiate(Notes[spawn_list[spawnIndex].type2], NoteSpawnPoints[spawn_list[spawnIndex].type2].position, Quaternion.identity);
+                        gameManager.NoteList.Add(Note2);
+                    }
 
-                GameObject Note = Instantiate(Notes[spawn_list[spawnIndex].type], NoteSpawnPoints[spawn_list[spawnIndex].type].position, Quaternion.identity);
-                gameManager.NoteList.Add(Note);
-                spawnIndex++;
-                if (spawnIndex == spawn_list.Count)
-                {
-                    SpawnEnd = true;
-                    return;
+                    GameObject Note = Instantiate(Notes[spawn_list[spawnIndex].type], NoteSpawnPoints[spawn_list[spawnIndex].type].position, Quaternion.identity);
+                    gameManager.NoteList.Add(Note);
+                    spawnIndex++;
+                    if (spawnIndex == spawn_list.Count)
+                    {
+                        SpawnEnd = true;
+                        SongEnd = true;
+                        return;
+                    }
+                    curTime -= 100d / spawn_list[spawnIndex].bpm;
                 }
-                curTime -= 100d / spawn_list[spawnIndex].bpm;
-            }
+            }    
         }
     }
 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class FNK_GameManager : MonoBehaviour
 {
@@ -15,6 +16,12 @@ public class FNK_GameManager : MonoBehaviour
     [SerializeField] Text Score;
     public Image Hp;
 
+    float EndTimer = 0;
+
+    public Text LastScore;
+    public GameObject Clear;
+    public GameObject Over;
+
     Vector2[] timingBox = null;
     float score = 0;
     public int combo = 1;
@@ -23,6 +30,7 @@ public class FNK_GameManager : MonoBehaviour
 
     void Start()
     {
+        LastScore.gameObject.SetActive(false);
         hp = maxhp;
         timingBox = new Vector2[4];
 
@@ -37,6 +45,37 @@ public class FNK_GameManager : MonoBehaviour
         if (hp > maxhp)
             hp = maxhp;
         Hp.fillAmount = Mathf.Lerp(Hp.fillAmount, hp / maxhp, Time.deltaTime * 5);
+
+        if (GetComponent<Note_Manager>().SpawnEnd == true)
+        {
+            EndTimer += Time.deltaTime;
+            if (EndTimer > 3)
+            {
+                Clear.SetActive(true);
+                FindObjectOfType<FlameScript>().Music.Stop();
+                GetComponent<Note_Manager>().SongEnd = true;
+                LastScore.gameObject.SetActive(true);
+                LastScore.text = score.ToString();
+                if(Input.anyKeyDown)
+                {
+                    SceneManager.LoadScene(0);
+                    EndTimer = 0;
+                }
+            }
+        }
+
+        if (hp <= 0)
+        {
+            Over.SetActive(true);
+            FindObjectOfType<FlameScript>().Music.Stop();
+            GetComponent<Note_Manager>().SongEnd = true;
+            LastScore.gameObject.SetActive(true);
+            LastScore.text = score.ToString();
+            if (Input.anyKeyDown)
+            {
+                SceneManager.LoadScene(0);
+            }
+        }
     }
 
     public void CheakTiming(int type)
