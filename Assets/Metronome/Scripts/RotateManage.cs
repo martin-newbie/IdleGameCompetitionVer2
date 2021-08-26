@@ -10,13 +10,15 @@ public class RotateManage : MonoBehaviour
     [SerializeField]
     Transform Target = null;
 
-    int Scores = 1;
+    float Mat_Score = 0;
 
     public float CurrentRotate;
 
     public bool RotationInverse = false;
 
     AudioSource MyAudio;
+
+
 
     public float RotateSpeed = 0;
     // Start is called before the first frame update
@@ -68,7 +70,7 @@ public class RotateManage : MonoBehaviour
             if (col.tag == "Finish")
             {
                 MyAudio.Play();
-                Scores++;
+               // Mat_Score++;
             }
         }
 
