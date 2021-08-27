@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/MiniGame/Busking/Scene/Busking.unity
     guid: 9b3958a4593d9d84a8f954a793de630d
   - enabled: 1
+    path: Assets/Metronome/Scene/Metronome.unity
+    guid: 69ef1c9adde861745b9a7f3ca729c97b
+  - enabled: 1
     path: Assets/RhythmGame/Scenes/MusicSelect.unity
     guid: e2aea62d702732d4dba15d40f10a06a2
   - enabled: 1

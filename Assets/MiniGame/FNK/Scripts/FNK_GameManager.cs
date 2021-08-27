@@ -47,34 +47,34 @@ public class FNK_GameManager : MonoBehaviour
             hp = maxhp;
         Hp.fillAmount = Mathf.Lerp(Hp.fillAmount, hp / maxhp, Time.deltaTime * 5);
 
-        //if (GetComponent<Note_Manager>().SpawnEnd == true)
-        //{
-        //    EndTimer += Time.deltaTime;
-        //    if (EndTimer > 3)
-        //    {
-        //        Clear.SetActive(true);
-        //        FindObjectOfType<FlameScript>().Music.Stop();
-        //        GetComponent<Note_Manager>().SongEnd = true;
-        //        LastScore.gameObject.SetActive(true);
-        //        if (Input.anyKeyDown)
-        //        {
-        //            SceneManager.LoadScene(0);
-        //            EndTimer = 0;
-        //        }
-        //    }
-        //}
+        if (GetComponent<Note_Manager>().SpawnEnd == true)
+        {
+            EndTimer += Time.deltaTime;
+            if (EndTimer > 3)
+            {
+                Clear.SetActive(true);
+                FindObjectOfType<FlameScript>().Music.Stop();
+                GetComponent<Note_Manager>().SongEnd = true;
+                LastScore.gameObject.SetActive(true);
+                if (Input.anyKeyDown)
+                {
+                    SceneManager.LoadScene(0);
+                    EndTimer = 0;
+                }
+            }
+        }
 
-        //if (hp <= 0)
-        //{
-        //    Over.SetActive(true);
-        //    FindObjectOfType<FlameScript>().Music.Stop();
-        //    GetComponent<Note_Manager>().SongEnd = true;
-        //    LastScore.gameObject.SetActive(true);
-        //    if (Input.anyKeyDown)
-        //    {
-        //        SceneManager.LoadScene(0);
-        //    }
-        //}
+        if (hp <= 0)
+        {
+            Over.SetActive(true);
+            FindObjectOfType<FlameScript>().Music.Stop();
+            GetComponent<Note_Manager>().SongEnd = true;
+            LastScore.gameObject.SetActive(true);
+            if (Input.anyKeyDown)
+            {
+                SceneManager.LoadScene(0);
+            }
+        }
     }
 
     public void CheakTiming(int type)
