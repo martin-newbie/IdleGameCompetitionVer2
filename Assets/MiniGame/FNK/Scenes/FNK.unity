@@ -232,7 +232,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 0
 --- !u!1 &189408513
 GameObject:
   m_ObjectHideFlags: 0
@@ -2637,6 +2637,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NoteList: []
+  EffectList:
+  - {fileID: 252343614906097433, guid: a9993b115a74b9f47b3af4e68f396966, type: 3}
+  - {fileID: 2966407488958868537, guid: c92d8e69f60cfcc4cab41d30564e68b8, type: 3}
+  - {fileID: 3036718774347027326, guid: 9c967139fe9b37f44b88252a710f0ece, type: 3}
+  - {fileID: 355244172950159681, guid: 7a22fe9928fb49d4893824287f45b14b, type: 3}
   Center: {fileID: 2103864754}
   Up: {fileID: 1137953151}
   Down: {fileID: 681734302}
