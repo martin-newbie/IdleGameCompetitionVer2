@@ -3562,7 +3562,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1283312538}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.9999998
+  m_Size: 0.9864085
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -6087,7 +6087,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -6109,7 +6109,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 400000
+          m_IntArgument: 1000000000
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -12727,7 +12727,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1614800885}
   m_HandleRect: {fileID: 1614800884}
   m_Direction: 0
-  m_Value: 1
+  m_Value: -0.0000000471433
   m_Size: 0.19818254
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -15284,7 +15284,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.00017353738}
+  m_AnchoredPosition: {x: 0, y: 0.0009850971}
   m_SizeDelta: {x: 0, y: 1584.5684}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1433173024
@@ -15973,7 +15973,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -5178.692, y: 0}
+  m_AnchoredPosition: {x: 0.00024414062, y: 0}
   m_SizeDelta: {x: 0, y: 2020.6763}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1507227239
@@ -16212,7 +16212,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -16234,7 +16234,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 8600000
+          m_IntArgument: 2800000
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0

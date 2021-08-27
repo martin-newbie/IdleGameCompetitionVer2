@@ -100,10 +100,10 @@ public abstract class UpgradeBtnBase : MonoBehaviour
         if (tLevel != 0) level = tLevel;
         if (tValue != "")
         {
-            value = new BigInteger(System.Convert.ToInt32(tValue));
+            value = new BigInteger(System.Convert.ToInt64(tValue));
         }
         else value = I_value;
-        if (tCost != "") cost = new BigInteger(System.Convert.ToInt32(tCost));
+        if (tCost != "") cost = new BigInteger(System.Convert.ToInt64(tCost));
         else cost = I_cost;
     }
 
