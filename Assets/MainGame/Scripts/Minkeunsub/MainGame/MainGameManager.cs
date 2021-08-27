@@ -83,12 +83,18 @@ public class MainGameManager : MonoBehaviour
     public bool[] mapUnlocked;
     int lockMap;
     #endregion
+
+    [Header("ETC")]
+    public GameObject coinWindow;
+    public TextMeshProUGUI resultCoinTxt;
+
     void Start()
     {
         for (int i = 0; i < mapImgs.Length; i++)
         {
             mapUnlocked[i] = PlayerPrefs.GetInt("unlocked map" + i.ToString()) == 1;
         }
+        
         map1Upgrades[0].GetComponent<UpgradeBtnBase>().locked = false;
         circleCur = circleDelay;
         MapSelect(0);
@@ -98,6 +104,20 @@ public class MainGameManager : MonoBehaviour
         curMap = 0;
         CoinLoad();
         Save();
+
+        string temp = PlayerPrefs.GetString("minigame coin");
+        if (temp != "")
+        {
+            BigInteger int_temp = BigInteger.Parse(PlayerPrefs.GetString("minigame coin"));
+            curCoin += int_temp;
+            coinWindow.SetActive(true);
+            resultCoinTxt.text = CoinCal.Instance.GetCoinText(int_temp);
+            PlayerPrefs.SetString("minigame coin", "");
+        }
+        else
+        {
+            coinWindow.SetActive(false);
+        }
     }
 
     void Update()
