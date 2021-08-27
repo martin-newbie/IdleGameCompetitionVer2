@@ -85,6 +85,10 @@ public class MainGameManager : MonoBehaviour
     #endregion
     void Start()
     {
+        for (int i = 0; i < mapImgs.Length; i++)
+        {
+            mapUnlocked[i] = PlayerPrefs.GetInt("unlocked map" + i.ToString()) == 1;
+        }
         map1Upgrades[0].GetComponent<UpgradeBtnBase>().locked = false;
         circleCur = circleDelay;
         MapSelect(0);
@@ -146,12 +150,12 @@ public class MainGameManager : MonoBehaviour
         if (increaseCoin < curCoin)
         {
             BigInteger offset = curCoin - increaseCoin;
-            increaseCoin += (offset * (int)(Time.deltaTime * 1000000)) / 4000000;
+            increaseCoin += (offset * (int)(Time.deltaTime * 1000000)) / 10000000;
         }
         else if (increaseCoin > curCoin)
         {
             BigInteger offset = increaseCoin - curCoin;
-            increaseCoin -= (offset * (int)(Time.deltaTime * 1000000)) / 4000000;
+            increaseCoin -= (offset * (int)(Time.deltaTime * 1000000)) / 10000000;
         }
 
         if (Mathf.Abs((float)(curCoin - increaseCoin)) < 0.5)
@@ -284,6 +288,7 @@ public class MainGameManager : MonoBehaviour
         {
             curCoin -= cost;
             mapUnlocked[lockMap] = true;
+            PlayerPrefs.SetInt("unlocked map" + lockMap.ToString(), 1);
         }
     }
 
