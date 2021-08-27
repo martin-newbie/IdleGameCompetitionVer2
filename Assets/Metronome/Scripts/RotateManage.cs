@@ -10,7 +10,7 @@ public class RotateManage : MonoBehaviour
     [SerializeField]
     Transform Target = null;
 
-    float Mat_Score = 0;
+    public int Level = 1;
 
     public float CurrentRotate;
 
@@ -18,14 +18,29 @@ public class RotateManage : MonoBehaviour
 
     AudioSource MyAudio;
 
+    public GameObject End;
+
+    public float Mat_Score = 0;
+
+    public Text Timer;
+
+    bool State = false;
+    bool isWin = false;
+
+    float Score = 0;
+
+    bool SpawnOnce = true;
+
 
 
     public float RotateSpeed = 0;
     // Start is called before the first frame update
      void Start()
     {
+        BTimer = 10;
+        State = false;
         MyAudio = GetComponent<AudioSource>();
-
+        Score = Random.Range(100, 200);
      //   bt = GetComponent<Button>();
     }
 
@@ -36,7 +51,14 @@ public class RotateManage : MonoBehaviour
 
         BarRotate();
 
+        switch(Level)
+        {
+            case 7: RotateSpeed = 0;State = true; isWin = true;
+                break;
+        }
 
+        Mat_Timer();
+        GameEnd();
     }
 
     public void BarRotate()
@@ -63,28 +85,61 @@ public class RotateManage : MonoBehaviour
         }
 
     }
-    public void OnTriggerEnter2D(Collider2D col)
+    public void OnTriggerStay2D(Collider2D col)
     {
-        if(BTimer > 0)
+        if(Input.GetMouseButtonDown(0))
         {
             if (col.tag == "Finish")
             {
                 MyAudio.Play();
-               // Mat_Score++;
+                Level++;
             }
         }
 
     }
 
-    public void MatButton()
+    public void Mat_Timer()
     {
-        if (BTimer > 0)
-            BTimer -= Time.deltaTime;
-       
+        if(State==false)
+        {
+            if (BTimer > 0)
+                BTimer -= Time.deltaTime;
+            Timer.text = Mathf.Ceil(BTimer).ToString();
+        }
+
+
+        if (BTimer < 0)
+        {
+            Timer.text = "Lose";
+            State = true;
+            Mat_Score = Score;
+            RotateSpeed = 0;
+        }
+
+        if (isWin == true)
+        {
+            if (SpawnOnce == true)
+            {
+                Timer.text = "Win";
+                Mat_Score = Score * BTimer;
+            }
+        }
     }
 
-    public void PressButton()
+    public void GameEnd()
     {
-        BTimer = 1;
+        if (SpawnOnce == true)
+        {
+            if (isWin == true || BTimer < 0)
+            {
+                End.gameObject.SetActive(true);
+                SpawnOnce = false;
+            }
+        }
+
+        if (State == false)
+        {
+            End.gameObject.SetActive(false);
+        }
     }
 }

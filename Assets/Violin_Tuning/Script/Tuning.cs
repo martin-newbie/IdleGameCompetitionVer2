@@ -200,7 +200,7 @@ public class Tuning : MonoBehaviour
             TimerText.text = "Lose";
             isSelect = false;
             isSelect2 = false;
-
+            State = true;
             Tuning_Score = Score;
         }
 
@@ -209,11 +209,9 @@ public class Tuning : MonoBehaviour
             if(SpawnOnce==true)
             {
                 TimerText.text = "Win";
-
+                State = true;
                 Tuning_Score = Score * Timer;
             }
-
-
         }
     }
 
