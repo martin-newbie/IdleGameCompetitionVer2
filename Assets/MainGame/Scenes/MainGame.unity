@@ -242,7 +242,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 647.8694, y: -2048.3855}
+  m_AnchoredPosition: {x: 647.8694, y: -2353.2122}
   m_SizeDelta: {x: 462.2389, y: 171.96387}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &27901356
@@ -259,10 +259,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unlock: {fileID: 8300000, guid: 13b9f1fd87d376e44b0e5ee7d32bb8de, type: 3}
   upgrade: {fileID: 8300000, guid: 2fe1d9e973744bb43bb5121009e2e3ac, type: 3}
-  costIncrease: 1.3
-  I_cost: 0
+  costIncrease: 1.2
+  I_cost: 32650000
   valueIncrease: 1.2
-  I_value: 0
+  I_value: 3700000
   level: 0
   locked: 0
   characterImg: {fileID: 561164114}
@@ -272,7 +272,7 @@ MonoBehaviour:
   btnName: {fileID: 2125897687}
   characterUnlocked: {fileID: 21300000, guid: 0929484b074fca74a8f77d43353d989b, type: 3}
   characterLocked: {fileID: 21300000, guid: 6cf4f58e6b80f484cb3595acbaed2b5d, type: 3}
-  btnNameStr: I-00-05
+  btnNameStr: DJ Controller
 --- !u!114 &27901357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -760,7 +760,7 @@ MonoBehaviour:
   unlock: {fileID: 8300000, guid: 7d61edaf4963eb943add74af1e61c80a, type: 3}
   upgrade: {fileID: 8300000, guid: 9dafb9ac699ed414cbf4870eebfc337d, type: 3}
   costIncrease: 1.2
-  I_cost: 1550000000
+  I_cost: 1000000000
   valueIncrease: 1.2
   I_value: 80000000
   level: 0
@@ -770,22 +770,23 @@ MonoBehaviour:
   valueTxt: {fileID: 1862408956}
   levelTxt: {fileID: 712467679}
   btnName: {fileID: 1313306481}
-  characterUnlocked: {fileID: 21300000, guid: 1e13e754239169f4e933f3d6b65ac646, type: 3}
+  characterUnlocked: {fileID: 21300000, guid: e2aa2c33049222843940a3770cab411a, type: 3}
   characterLocked: {fileID: 21300000, guid: 74f38a5a0781ecc4a9bb34f3434b9055, type: 3}
   btnNameStr: clarinet
   character: {fileID: 2054503329}
-  characterSprite: {fileID: 21300000, guid: 1e13e754239169f4e933f3d6b65ac646, type: 3}
+  characterSprite: {fileID: 21300000, guid: e2aa2c33049222843940a3770cab411a, type: 3}
   characterName: clarinet
-  characterDesc: lorem ipsum
-  characterPosts: 5
-  characterFollwer: 24
-  characterFollowing: 5
+  characterDesc: Jazz~
+  characterPosts: 56
+  characterFollwer: 344
+  characterFollowing: 27
   characterPostsImg:
-  - {fileID: 21300000, guid: ece4ea5da48673f41b3bfac3b5733290, type: 3}
-  - {fileID: 21300000, guid: ecda8e2b748203b429a25221c854e7aa, type: 3}
-  - {fileID: 21300000, guid: 002c81cbb42d58247b6e86abb291cf1e, type: 3}
-  - {fileID: 21300000, guid: 20e48ee1110f8b544927548216bc373b, type: 3}
-  - {fileID: 21300000, guid: 532904e0cdd111c4d8bb364ab3fcda57, type: 3}
+  - {fileID: 21300000, guid: e2aa2c33049222843940a3770cab411a, type: 3}
+  - {fileID: 21300000, guid: d5d32a1d43d4261448311d9651439abf, type: 3}
+  - {fileID: 21300000, guid: 3ac536df992a9644db9859eda17d7bdb, type: 3}
+  - {fileID: 21300000, guid: e90385768c3ac124a8f13740b2d7824e, type: 3}
+  - {fileID: 21300000, guid: b6b48aeaaa7af9446881fd01418abc7d, type: 3}
+  - {fileID: 21300000, guid: e294afa3a782f04489860560b35f9025, type: 3}
   selected: 0
 --- !u!114 &40486176
 MonoBehaviour:
@@ -850,17 +851,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 65701586}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 422064984}
+  m_Father: {fileID: 89710214}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 1137.4702, y: -650.2346}
+  m_SizeDelta: {x: 175, y: 175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &65701588
 MonoBehaviour:
@@ -913,7 +914,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: RhythmGame
+          m_StringArgument: MusicSelect
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &65701589
@@ -1370,6 +1371,85 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &89710213
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 89710214}
+  - component: {fileID: 89710216}
+  - component: {fileID: 89710215}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &89710214
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89710213}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1246241895}
+  - {fileID: 961442249}
+  - {fileID: 301111055}
+  - {fileID: 65701587}
+  - {fileID: 712920484}
+  m_Father: {fileID: 422064984}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -424}
+  m_SizeDelta: {x: 1295.6792, y: 2805.1455}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &89710215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89710213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: ab4310a90efb0b6459bd54afa89ebf6b, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &89710216
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89710213}
+  m_CullTransparentMesh: 0
 --- !u!1 &94148785
 GameObject:
   m_ObjectHideFlags: 0
@@ -2527,7 +2607,6 @@ MonoBehaviour:
   - {fileID: 1915687988}
   - {fileID: 27901356}
   - {fileID: 1980000457}
-  curTouchCointxt: {fileID: 1491787080}
   profile: {fileID: 829709343}
   mapImg: {fileID: 1984181699}
   mapImgs:
@@ -2960,17 +3039,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 301111054}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 422064984}
+  m_Father: {fileID: 89710214}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 812.4702, y: -650.2346}
+  m_SizeDelta: {x: 175, y: 175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &301111056
 MonoBehaviour:
@@ -3647,7 +3726,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -0.000902475}
-  m_SizeDelta: {x: 0.00036621094, y: 2607.036}
+  m_SizeDelta: {x: 0.00036621094, y: 2994.9973}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &403197447
 MonoBehaviour:
@@ -3684,8 +3763,6 @@ GameObject:
   m_Component:
   - component: {fileID: 422064984}
   - component: {fileID: 422064986}
-  - component: {fileID: 422064985}
-  - component: {fileID: 422064987}
   - component: {fileID: 422064988}
   m_Layer: 5
   m_Name: Minigame panel
@@ -3705,11 +3782,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1246241895}
-  - {fileID: 961442249}
-  - {fileID: 301111055}
-  - {fileID: 65701587}
-  - {fileID: 712920484}
+  - {fileID: 89710214}
   m_Father: {fileID: 1507227238}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3718,35 +3791,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1295.7384, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &422064985
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 422064983}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.6226415, g: 0.6226415, b: 0.6226415, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c58177b2d6349f04ea56818353986afe, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &422064986
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3755,30 +3799,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 422064983}
   m_CullTransparentMesh: 0
---- !u!114 &422064987
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 422064983}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Padding:
-    m_Left: 50
-    m_Right: 50
-    m_Top: 50
-    m_Bottom: 50
-  m_ChildAlignment: 0
-  m_StartCorner: 0
-  m_StartAxis: 0
-  m_CellSize: {x: 175, y: 175}
-  m_Spacing: {x: 150, y: 0}
-  m_Constraint: 0
-  m_ConstraintCount: 2
 --- !u!114 &422064988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5385,9 +5405,9 @@ MonoBehaviour:
   unlock: {fileID: 8300000, guid: 7d61edaf4963eb943add74af1e61c80a, type: 3}
   upgrade: {fileID: 8300000, guid: 9dafb9ac699ed414cbf4870eebfc337d, type: 3}
   costIncrease: 1.2
-  I_cost: 1550000000
+  I_cost: 2147483647
   valueIncrease: 1.2
-  I_value: 80000000
+  I_value: 160000000
   level: 0
   locked: 0
   characterImg: {fileID: 942723186}
@@ -5395,22 +5415,23 @@ MonoBehaviour:
   valueTxt: {fileID: 1785197582}
   levelTxt: {fileID: 2088002637}
   btnName: {fileID: 2054085986}
-  characterUnlocked: {fileID: 21300000, guid: 1e13e754239169f4e933f3d6b65ac646, type: 3}
+  characterUnlocked: {fileID: 21300000, guid: 69b820227e580304faee6cd95de6aeb2, type: 3}
   characterLocked: {fileID: 21300000, guid: 74f38a5a0781ecc4a9bb34f3434b9055, type: 3}
   btnNameStr: saxophone
   character: {fileID: 1782775846}
-  characterSprite: {fileID: 21300000, guid: 1e13e754239169f4e933f3d6b65ac646, type: 3}
-  characterName: clarinet
-  characterDesc: lorem ipsum
-  characterPosts: 5
-  characterFollwer: 24
-  characterFollowing: 5
+  characterSprite: {fileID: 21300000, guid: 69b820227e580304faee6cd95de6aeb2, type: 3}
+  characterName: saxophone
+  characterDesc: love Bill Evans and Charles Parker, Jr.
+  characterPosts: 79
+  characterFollwer: 631
+  characterFollowing: 10
   characterPostsImg:
-  - {fileID: 21300000, guid: ece4ea5da48673f41b3bfac3b5733290, type: 3}
-  - {fileID: 21300000, guid: ecda8e2b748203b429a25221c854e7aa, type: 3}
-  - {fileID: 21300000, guid: 002c81cbb42d58247b6e86abb291cf1e, type: 3}
-  - {fileID: 21300000, guid: 20e48ee1110f8b544927548216bc373b, type: 3}
-  - {fileID: 21300000, guid: 532904e0cdd111c4d8bb364ab3fcda57, type: 3}
+  - {fileID: 21300000, guid: 1b1a184804d6bb94b83efd799c6b3bfa, type: 3}
+  - {fileID: 21300000, guid: c8df2302ab04f054f97c63bb2b5588e8, type: 3}
+  - {fileID: 21300000, guid: 5cab789e5f110ad47822fad396317b89, type: 3}
+  - {fileID: 21300000, guid: 0831ce1df55f0d743ad4b8bd5e6ea2f5, type: 3}
+  - {fileID: 21300000, guid: 0a193262567fea345a602295c2f1411e, type: 3}
+  - {fileID: 21300000, guid: 4f7abd4be798e63469201126d934ccef, type: 3}
   selected: 0
 --- !u!114 &556485952
 MonoBehaviour:
@@ -5789,7 +5810,7 @@ MonoBehaviour:
   costIncrease: 1.2
   I_cost: 1550000000
   valueIncrease: 1.2
-  I_value: 80000000
+  I_value: 100000000
   level: 0
   locked: 0
   characterImg: {fileID: 1017160851}
@@ -5797,21 +5818,22 @@ MonoBehaviour:
   valueTxt: {fileID: 707282728}
   levelTxt: {fileID: 1724850013}
   btnName: {fileID: 1341160932}
-  characterUnlocked: {fileID: 21300000, guid: 1e13e754239169f4e933f3d6b65ac646, type: 3}
+  characterUnlocked: {fileID: 21300000, guid: b4edd96af8ab41448b70f8151a9a0e08, type: 3}
   characterLocked: {fileID: 21300000, guid: 74f38a5a0781ecc4a9bb34f3434b9055, type: 3}
   btnNameStr: trombone
   character: {fileID: 294486122}
-  characterSprite: {fileID: 21300000, guid: 1e13e754239169f4e933f3d6b65ac646, type: 3}
-  characterName: clarinet
-  characterDesc: lorem ipsum
-  characterPosts: 5
-  characterFollwer: 24
-  characterFollowing: 5
+  characterSprite: {fileID: 21300000, guid: b4edd96af8ab41448b70f8151a9a0e08, type: 3}
+  characterName: trombone
+  characterDesc: fuxxing sister
+  characterPosts: 24
+  characterFollwer: 83
+  characterFollowing: 11
   characterPostsImg:
   - {fileID: 21300000, guid: ece4ea5da48673f41b3bfac3b5733290, type: 3}
   - {fileID: 21300000, guid: ecda8e2b748203b429a25221c854e7aa, type: 3}
   - {fileID: 21300000, guid: 002c81cbb42d58247b6e86abb291cf1e, type: 3}
   - {fileID: 21300000, guid: 20e48ee1110f8b544927548216bc373b, type: 3}
+  - {fileID: 21300000, guid: 532904e0cdd111c4d8bb364ab3fcda57, type: 3}
   - {fileID: 21300000, guid: 532904e0cdd111c4d8bb364ab3fcda57, type: 3}
   selected: 0
 --- !u!114 &583377774
@@ -6995,17 +7017,20 @@ MonoBehaviour:
   btnNameStr: base
   character: {fileID: 1473683709}
   characterSprite: {fileID: 21300000, guid: c10d70378a7ea214abbcac855e6adad3, type: 3}
-  characterName: guitar
-  characterDesc: lorem ipsum
-  characterPosts: 2
-  characterFollwer: 13
-  characterFollowing: 32
+  characterName: base
+  characterDesc: 'love to collect quitar
+
+    leave me a DM when you have it'
+  characterPosts: 73
+  characterFollwer: 14702
+  characterFollowing: 68
   characterPostsImg:
-  - {fileID: 21300000, guid: ece4ea5da48673f41b3bfac3b5733290, type: 3}
-  - {fileID: 21300000, guid: ecda8e2b748203b429a25221c854e7aa, type: 3}
-  - {fileID: 21300000, guid: 002c81cbb42d58247b6e86abb291cf1e, type: 3}
-  - {fileID: 21300000, guid: 20e48ee1110f8b544927548216bc373b, type: 3}
-  - {fileID: 21300000, guid: 532904e0cdd111c4d8bb364ab3fcda57, type: 3}
+  - {fileID: 21300000, guid: 48805d04cdb8a6446ac99c5e23c5ecbd, type: 3}
+  - {fileID: 21300000, guid: fbd7ceb70c68d9d49bb1aca3328557eb, type: 3}
+  - {fileID: 21300000, guid: e7defde09f0cd8f4cbbb4ed3e58701bd, type: 3}
+  - {fileID: 21300000, guid: e44523efe00df6944bfdbefcdf950440, type: 3}
+  - {fileID: 21300000, guid: 775fd55035b8d9c49be352554cb0119e, type: 3}
+  - {fileID: 21300000, guid: 300f4abdcfbb146419a92969e7452918, type: 3}
   selected: 0
 --- !u!114 &640628620
 MonoBehaviour:
@@ -7926,17 +7951,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 712920483}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 422064984}
+  m_Father: {fileID: 89710214}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 162.47021, y: -975.2346}
+  m_SizeDelta: {x: 175, y: 175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &712920485
 MonoBehaviour:
@@ -10299,17 +10324,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 961442248}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 422064984}
+  m_Father: {fileID: 89710214}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 487.4702, y: -650.2346}
+  m_SizeDelta: {x: 175, y: 175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &961442250
 MonoBehaviour:
@@ -12702,8 +12727,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1614800885}
   m_HandleRect: {fileID: 1614800884}
   m_Direction: 0
-  m_Value: 0
-  m_Size: 0.19818252
+  m_Value: -0.0000000942866
+  m_Size: 0.19818254
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -13029,7 +13054,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 647.8694, y: -558.6506}
+  m_AnchoredPosition: {x: 647.8694, y: -641.78516}
   m_SizeDelta: {x: 462.2389, y: 171.96387}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1225247153
@@ -13046,10 +13071,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unlock: {fileID: 8300000, guid: 13b9f1fd87d376e44b0e5ee7d32bb8de, type: 3}
   upgrade: {fileID: 8300000, guid: 2fe1d9e973744bb43bb5121009e2e3ac, type: 3}
-  costIncrease: 1.3
-  I_cost: 0
+  costIncrease: 1.2
+  I_cost: 4500
   valueIncrease: 1.2
-  I_value: 0
+  I_value: 220
   level: 0
   locked: 0
   characterImg: {fileID: 2016181552}
@@ -13059,7 +13084,7 @@ MonoBehaviour:
   btnName: {fileID: 466850034}
   characterUnlocked: {fileID: 21300000, guid: 6a6ec9051cb2e014a98f61ccc7a6bcd0, type: 3}
   characterLocked: {fileID: 21300000, guid: 6cf4f58e6b80f484cb3595acbaed2b5d, type: 3}
-  btnNameStr: I-00-01
+  btnNameStr: Speaker
 --- !u!114 &1225247154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13204,17 +13229,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1246241894}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 422064984}
+  m_Father: {fileID: 89710214}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 162.47021, y: -650.2346}
+  m_SizeDelta: {x: 175, y: 175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1246241896
 MonoBehaviour:
@@ -14253,16 +14278,19 @@ MonoBehaviour:
   character: {fileID: 365538484}
   characterSprite: {fileID: 21300000, guid: a7bb2d0acb330e14c83dcff784c15aa7, type: 3}
   characterName: cello
-  characterDesc: yodel
+  characterDesc: 'yodelay
+
+    orchestra cello'
   characterPosts: 54
   characterFollwer: 445
   characterFollowing: 341
   characterPostsImg:
-  - {fileID: 21300000, guid: ece4ea5da48673f41b3bfac3b5733290, type: 3}
-  - {fileID: 21300000, guid: ecda8e2b748203b429a25221c854e7aa, type: 3}
-  - {fileID: 21300000, guid: 002c81cbb42d58247b6e86abb291cf1e, type: 3}
-  - {fileID: 21300000, guid: 20e48ee1110f8b544927548216bc373b, type: 3}
-  - {fileID: 21300000, guid: 532904e0cdd111c4d8bb364ab3fcda57, type: 3}
+  - {fileID: 21300000, guid: e921c5552ddcfb24c87f65ed7a37b16a, type: 3}
+  - {fileID: 21300000, guid: 206805ccf6638954fba3c8ba4590e813, type: 3}
+  - {fileID: 21300000, guid: 20663e7f50faccc459edfce33d15a7ee, type: 3}
+  - {fileID: 21300000, guid: fd45e921bfb92224796af71abd114303, type: 3}
+  - {fileID: 21300000, guid: 90db16637f76dc7449ac2ca8829bb21c, type: 3}
+  - {fileID: 21300000, guid: c865127b9a70f9c4e872d014cfe58ccd, type: 3}
   selected: 0
 --- !u!114 &1326256265
 MonoBehaviour:
@@ -14905,17 +14933,20 @@ MonoBehaviour:
   btnNameStr: piano
   character: {fileID: 2047751864}
   characterSprite: {fileID: 21300000, guid: 33234b81e9f230048b1b3f36bbbbb7b8, type: 3}
-  characterName: guitar
-  characterDesc: lorem ipsum
-  characterPosts: 2
-  characterFollwer: 13
-  characterFollowing: 32
+  characterName: piano
+  characterDesc: 'emotional attachment
+
+    love orchestra and band'
+  characterPosts: 10
+  characterFollwer: 21
+  characterFollowing: 246
   characterPostsImg:
-  - {fileID: 21300000, guid: ece4ea5da48673f41b3bfac3b5733290, type: 3}
-  - {fileID: 21300000, guid: ecda8e2b748203b429a25221c854e7aa, type: 3}
-  - {fileID: 21300000, guid: 002c81cbb42d58247b6e86abb291cf1e, type: 3}
-  - {fileID: 21300000, guid: 20e48ee1110f8b544927548216bc373b, type: 3}
-  - {fileID: 21300000, guid: 532904e0cdd111c4d8bb364ab3fcda57, type: 3}
+  - {fileID: 21300000, guid: 8c8c2ad0a653fd241b17872993226e82, type: 3}
+  - {fileID: 21300000, guid: f773cc22d71b0e641b6743376dd65381, type: 3}
+  - {fileID: 21300000, guid: 2dd6db764e90fc5469a5d6459a990c62, type: 3}
+  - {fileID: 21300000, guid: d06e08324aee4864f8023cf3d9b67a3b, type: 3}
+  - {fileID: 21300000, guid: df29b190c522bff4881ddc7d7343166a, type: 3}
+  - {fileID: 21300000, guid: d66381c3574d75044aaa839a8ce70311, type: 3}
   selected: 0
 --- !u!114 &1400532664
 MonoBehaviour:
@@ -15035,8 +15066,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 571038011}
   m_HandleRect: {fileID: 571038010}
   m_Direction: 2
-  m_Value: 1.0000008
-  m_Size: 0.6411444
+  m_Value: 1.0000007
+  m_Size: 0.55809283
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -15829,139 +15860,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1491787078
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1491787079}
-  - component: {fileID: 1491787081}
-  - component: {fileID: 1491787080}
-  m_Layer: 5
-  m_Name: curUpgradeCoin
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1491787079
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1491787078}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2141486753}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -327.84, y: 605.76}
-  m_SizeDelta: {x: 422.31244, y: 70.476074}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1491787080
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1491787078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: 'cur cost '
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 1
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 1
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &1491787081
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1491787078}
-  m_CullTransparentMesh: 0
 --- !u!1 &1492971375
 GameObject:
   m_ObjectHideFlags: 0
@@ -16075,7 +15973,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.00012207031, y: 0}
+  m_AnchoredPosition: {x: 0.00048828125, y: 0}
   m_SizeDelta: {x: 0, y: 2020.6763}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1507227239
@@ -16549,7 +16447,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 647.8694, y: -931.0843}
+  m_AnchoredPosition: {x: 647.8694, y: -1069.6418}
   m_SizeDelta: {x: 462.2389, y: 171.96387}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1601246529
@@ -16566,10 +16464,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unlock: {fileID: 8300000, guid: 13b9f1fd87d376e44b0e5ee7d32bb8de, type: 3}
   upgrade: {fileID: 8300000, guid: 2fe1d9e973744bb43bb5121009e2e3ac, type: 3}
-  costIncrease: 1.3
-  I_cost: 0
+  costIncrease: 1.2
+  I_cost: 89000
   valueIncrease: 1.2
-  I_value: 0
+  I_value: 1250
   level: 0
   locked: 0
   characterImg: {fileID: 893750308}
@@ -16579,7 +16477,7 @@ MonoBehaviour:
   btnName: {fileID: 1323519999}
   characterUnlocked: {fileID: 21300000, guid: c70520afe69ebb848aae8a2f299828ab, type: 3}
   characterLocked: {fileID: 21300000, guid: 6cf4f58e6b80f484cb3595acbaed2b5d, type: 3}
-  btnNameStr: I-00-02
+  btnNameStr: Audio interface
 --- !u!114 &1601246530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16657,7 +16555,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 647.8694, y: -186.21686}
+  m_AnchoredPosition: {x: 647.8694, y: -213.92838}
   m_SizeDelta: {x: 462.2389, y: 171.96387}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1610646639
@@ -16674,10 +16572,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unlock: {fileID: 8300000, guid: 13b9f1fd87d376e44b0e5ee7d32bb8de, type: 3}
   upgrade: {fileID: 8300000, guid: 2fe1d9e973744bb43bb5121009e2e3ac, type: 3}
-  costIncrease: 1.3
-  I_cost: 0
+  costIncrease: 1.2
+  I_cost: 250
   valueIncrease: 1.2
-  I_value: 0
+  I_value: 50
   level: 0
   locked: 0
   characterImg: {fileID: 1320857955}
@@ -16687,7 +16585,7 @@ MonoBehaviour:
   btnName: {fileID: 967869738}
   characterUnlocked: {fileID: 21300000, guid: 7c5b729cf4237f044b4583409169546a, type: 3}
   characterLocked: {fileID: 21300000, guid: 6cf4f58e6b80f484cb3595acbaed2b5d, type: 3}
-  btnNameStr: I-00-00
+  btnNameStr: Computer
 --- !u!114 &1610646640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16794,20 +16692,23 @@ MonoBehaviour:
   btnName: {fileID: 1735921843}
   characterUnlocked: {fileID: 21300000, guid: 1e13e754239169f4e933f3d6b65ac646, type: 3}
   characterLocked: {fileID: 21300000, guid: 74f38a5a0781ecc4a9bb34f3434b9055, type: 3}
-  btnNameStr: quitar
+  btnNameStr: guitar
   character: {fileID: 1231206270}
   characterSprite: {fileID: 21300000, guid: 4246788cda3861245a054399402ed6a4, type: 3}
   characterName: guitar
-  characterDesc: lorem ipsum
-  characterPosts: 2
-  characterFollwer: 13
-  characterFollowing: 32
+  characterDesc: 'practicing quitar occasionally
+
+    visit often'
+  characterPosts: 53
+  characterFollwer: 61
+  characterFollowing: 21
   characterPostsImg:
-  - {fileID: 21300000, guid: ece4ea5da48673f41b3bfac3b5733290, type: 3}
-  - {fileID: 21300000, guid: ecda8e2b748203b429a25221c854e7aa, type: 3}
-  - {fileID: 21300000, guid: 002c81cbb42d58247b6e86abb291cf1e, type: 3}
-  - {fileID: 21300000, guid: 20e48ee1110f8b544927548216bc373b, type: 3}
-  - {fileID: 21300000, guid: 532904e0cdd111c4d8bb364ab3fcda57, type: 3}
+  - {fileID: 21300000, guid: 421db61ba0184f142806aa51ea826e20, type: 3}
+  - {fileID: 21300000, guid: 7178a83cce322a543a7542a4c91ce0ce, type: 3}
+  - {fileID: 21300000, guid: 8e3152146c8feef4eab0d512df77a3d1, type: 3}
+  - {fileID: 21300000, guid: b39b019ecf36e0146936988c214a4a78, type: 3}
+  - {fileID: 21300000, guid: 596fb063352cd9c44836386d4a27affb, type: 3}
+  - {fileID: 21300000, guid: 1b450c6f6f56df04c911d02e89ad2e54, type: 3}
   selected: 0
 --- !u!114 &1610912746
 MonoBehaviour:
@@ -20425,7 +20326,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 647.8694, y: -1675.9517}
+  m_AnchoredPosition: {x: 647.8694, y: -1925.3553}
   m_SizeDelta: {x: 462.2389, y: 171.96387}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1915687988
@@ -20442,10 +20343,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unlock: {fileID: 8300000, guid: 13b9f1fd87d376e44b0e5ee7d32bb8de, type: 3}
   upgrade: {fileID: 8300000, guid: 2fe1d9e973744bb43bb5121009e2e3ac, type: 3}
-  costIncrease: 1.3
-  I_cost: 0
+  costIncrease: 1.2
+  I_cost: 7560000
   valueIncrease: 1.2
-  I_value: 0
+  I_value: 237000
   level: 0
   locked: 0
   characterImg: {fileID: 758592212}
@@ -20455,7 +20356,7 @@ MonoBehaviour:
   btnName: {fileID: 862893726}
   characterUnlocked: {fileID: 21300000, guid: cfce72726da7a0e4492b2cce1b10d635, type: 3}
   characterLocked: {fileID: 21300000, guid: 6cf4f58e6b80f484cb3595acbaed2b5d, type: 3}
-  btnNameStr: I-00-04
+  btnNameStr: Mic
 --- !u!114 &1915687989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20823,17 +20724,18 @@ MonoBehaviour:
   btnNameStr: vocal
   character: {fileID: 74429556}
   characterSprite: {fileID: 21300000, guid: 09c89e33657c40d4fa2c8f96e62ee994, type: 3}
-  characterName: guitar
+  characterName: vocal
   characterDesc: lorem ipsum
-  characterPosts: 2
-  characterFollwer: 13
-  characterFollowing: 32
+  characterPosts: 351
+  characterFollwer: 52018
+  characterFollowing: 121
   characterPostsImg:
-  - {fileID: 21300000, guid: ece4ea5da48673f41b3bfac3b5733290, type: 3}
-  - {fileID: 21300000, guid: ecda8e2b748203b429a25221c854e7aa, type: 3}
-  - {fileID: 21300000, guid: 002c81cbb42d58247b6e86abb291cf1e, type: 3}
-  - {fileID: 21300000, guid: 20e48ee1110f8b544927548216bc373b, type: 3}
-  - {fileID: 21300000, guid: 532904e0cdd111c4d8bb364ab3fcda57, type: 3}
+  - {fileID: 21300000, guid: 3b7d57948b9805044b742fbc92fc96f1, type: 3}
+  - {fileID: 21300000, guid: a24bb8ee218d3764eae33e6b22fb67f1, type: 3}
+  - {fileID: 21300000, guid: 0b4da77c4ac3df042883f1d05a5b3c17, type: 3}
+  - {fileID: 21300000, guid: f31940e741a04064c93834dcf7ecffc8, type: 3}
+  - {fileID: 21300000, guid: 7c494f514a4aa8c4b995aead5a38a5e9, type: 3}
+  - {fileID: 21300000, guid: af9279d856fadad409f7e4bd696b0785, type: 3}
   selected: 0
 --- !u!114 &1930880993
 MonoBehaviour:
@@ -21462,7 +21364,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 647.8694, y: -1303.5181}
+  m_AnchoredPosition: {x: 647.8694, y: -1497.4987}
   m_SizeDelta: {x: 462.2389, y: 171.96387}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1977267012
@@ -21479,10 +21381,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unlock: {fileID: 8300000, guid: 13b9f1fd87d376e44b0e5ee7d32bb8de, type: 3}
   upgrade: {fileID: 8300000, guid: 2fe1d9e973744bb43bb5121009e2e3ac, type: 3}
-  costIncrease: 1.3
-  I_cost: 0
+  costIncrease: 1.2
+  I_cost: 147000
   valueIncrease: 1.2
-  I_value: 0
+  I_value: 43500
   level: 0
   locked: 0
   characterImg: {fileID: 1112931114}
@@ -21492,7 +21394,7 @@ MonoBehaviour:
   btnName: {fileID: 614587620}
   characterUnlocked: {fileID: 21300000, guid: 780c55f93162671408f8268410e36f82, type: 3}
   characterLocked: {fileID: 21300000, guid: 6cf4f58e6b80f484cb3595acbaed2b5d, type: 3}
-  btnNameStr: I-00-03
+  btnNameStr: Piano
 --- !u!114 &1977267013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21570,7 +21472,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 647.8694, y: -2420.819}
+  m_AnchoredPosition: {x: 647.8694, y: -2781.0688}
   m_SizeDelta: {x: 462.2389, y: 171.96387}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1980000457
@@ -21587,10 +21489,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unlock: {fileID: 8300000, guid: 13b9f1fd87d376e44b0e5ee7d32bb8de, type: 3}
   upgrade: {fileID: 8300000, guid: 2fe1d9e973744bb43bb5121009e2e3ac, type: 3}
-  costIncrease: 1.3
-  I_cost: 0
+  costIncrease: 1.2
+  I_cost: 932000000
   valueIncrease: 1.2
-  I_value: 0
+  I_value: 24000000
   level: 0
   locked: 0
   characterImg: {fileID: 669836794}
@@ -21600,7 +21502,7 @@ MonoBehaviour:
   btnName: {fileID: 1645026854}
   characterUnlocked: {fileID: 21300000, guid: d1c75d37d649ef94e938e7b8ead36d3c, type: 3}
   characterLocked: {fileID: 21300000, guid: 6cf4f58e6b80f484cb3595acbaed2b5d, type: 3}
-  btnNameStr: I-00-06
+  btnNameStr: Amplifier
 --- !u!114 &1980000458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22757,7 +22659,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: c9e947cd1c96b7446a63e2b326ec9756, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -23557,17 +23459,21 @@ MonoBehaviour:
   character: {fileID: 5911415}
   characterSprite: {fileID: 21300000, guid: 2206902f622e4c54e94568bc78d86761, type: 3}
   characterName: violin
-  characterDesc: cyka blyat
-  characterPosts: 4
-  characterFollwer: 56
-  characterFollowing: 8
+  characterDesc: 'orchestra club manager
+
+    1st violin in team
+
+'
+  characterPosts: 35
+  characterFollwer: 1293
+  characterFollowing: 34
   characterPostsImg:
   - {fileID: 21300000, guid: 0c6b8e3f4aeb4c24e951e92ee4598bde, type: 3}
-  - {fileID: 21300000, guid: 358dac94f1faf934ba0c07461bbd69c7, type: 3}
-  - {fileID: 21300000, guid: 692878376be98514ca6622d2787654d1, type: 3}
-  - {fileID: 21300000, guid: 3bbfe574030f4d043a5f80d43f48a324, type: 3}
-  - {fileID: 21300000, guid: d6f732ac49c50f647ac5490ed77f75c9, type: 3}
-  - {fileID: 21300000, guid: d2cb286c802652e4da2facb9f2606f17, type: 3}
+  - {fileID: 21300000, guid: cf321907968725f44b175d4c590dfa2b, type: 3}
+  - {fileID: 21300000, guid: 41f1a8a299620524d97f90cc221a5bd8, type: 3}
+  - {fileID: 21300000, guid: 421db61ba0184f142806aa51ea826e20, type: 3}
+  - {fileID: 21300000, guid: 3fc31c1de4d67d745b45d0465c868e98, type: 3}
+  - {fileID: 21300000, guid: ceea8fedec20e3a4aa362364cef49d0e, type: 3}
   selected: 0
 --- !u!1 &2141486752
 GameObject:
@@ -23603,7 +23509,6 @@ RectTransform:
   - {fileID: 353184818}
   - {fileID: 869282513}
   - {fileID: 116089776}
-  - {fileID: 1491787079}
   m_Father: {fileID: 1507227238}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

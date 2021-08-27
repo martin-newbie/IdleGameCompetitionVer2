@@ -5,19 +5,20 @@ using UnityEngine.UI;
 
 public class RotateManage : MonoBehaviour
 {
+    public float BTimer = 0;
+
     [SerializeField]
     Transform Target = null;
 
-    public Text Score;
+    float Mat_Score = 0;
 
-    int Scores = 1;
+    public float CurrentRotate;
 
-    //public Button bt;
-    private float ButtonTimer = 1f;
-
-    bool isButtonClick = false;
+    public bool RotationInverse = false;
 
     AudioSource MyAudio;
+
+
 
     public float RotateSpeed = 0;
     // Start is called before the first frame update
@@ -31,71 +32,59 @@ public class RotateManage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        CurrentRotate = this.transform.localEulerAngles.z;
+
         BarRotate();
 
-        Score.text = "Score : " + Scores;
-
-        if (isButtonClick == true) 
-        {
-            ButtonTimer -= 1 * Time.deltaTime;
-
-            if (ButtonTimer == 0)
-            {
-                isButtonClick = false;
-                Debug.Log("TimerFalse");
-            }
-        }
 
     }
 
     public void BarRotate()
     {
         this.transform.RotateAround(Target.position, Vector3.forward, RotateSpeed * Time.deltaTime);
-        
-       /* if (this.transform.rotation.z <= 40)
+       
+
+       if(RotationInverse==false)
         {
-            Debug.Log("Inverse1");
-            RotateSpeed = 100;
-        }*/
-       if(RotateSpeed ==40)
-        {
-            if (this.transform.localEulerAngles.z >= 40)
+            if (CurrentRotate >= 40)
             {
-                Debug.Log("Inverse1");
-                RotateSpeed = -40;
+                RotateSpeed = -60;
+                RotationInverse = true;
             }
         }
 
-       if(RotateSpeed ==-40)
+        if(RotationInverse==true)
         {
-            if (this.transform.localEulerAngles.z >= 180)
+            if (CurrentRotate >= 320)
             {
-                Debug.Log("Inverse2");
-                RotateSpeed = 40;
+                RotateSpeed = 60;
+                RotationInverse = false;
             }
         }
-
 
     }
     public void OnTriggerEnter2D(Collider2D col)
     {
-        if(isButtonClick == true)
+        if(BTimer > 0)
         {
             if (col.tag == "Finish")
             {
                 MyAudio.Play();
-                Scores++;
-                Debug.Log("점수");
+               // Mat_Score++;
             }
         }
-     
 
     }
 
-    public void Button1()
+    public void MatButton()
     {
-        isButtonClick = true;
-        Debug.Log("ButtonSet");
-        
+        if (BTimer > 0)
+            BTimer -= Time.deltaTime;
+       
+    }
+
+    public void PressButton()
+    {
+        BTimer = 1;
     }
 }

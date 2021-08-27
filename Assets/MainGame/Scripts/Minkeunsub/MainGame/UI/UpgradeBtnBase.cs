@@ -33,18 +33,18 @@ public abstract class UpgradeBtnBase : MonoBehaviour
     public bool locked;
 
     [Header("button object")]
-    public Image            characterImg;
-    public TextMeshProUGUI  costTxt;
-    public TextMeshProUGUI  valueTxt;
-    public TextMeshProUGUI  levelTxt;
-    public TextMeshProUGUI  btnName;
+    public Image characterImg;
+    public TextMeshProUGUI costTxt;
+    public TextMeshProUGUI valueTxt;
+    public TextMeshProUGUI levelTxt;
+    public TextMeshProUGUI btnName;
 
     [Header("sprite")]
-    public Sprite           characterUnlocked;
-    public Sprite           characterLocked;
+    public Sprite characterUnlocked;
+    public Sprite characterLocked;
 
     [Header("variable")]
-    public string           btnNameStr;
+    public string btnNameStr;
     string saveName;
 
     protected void Awake()
@@ -67,6 +67,17 @@ public abstract class UpgradeBtnBase : MonoBehaviour
         levelTxt.text = level.ToString();
         CharacterController();
         Save();
+        if (Input.GetKeyDown(KeyCode.R)) Refresh();
+    }
+
+    void Refresh()
+    {
+        level = 0;
+        locked = true;
+        if (I_cost == 1500) locked = false;
+        cost = I_cost;
+        value = I_value;
+        Save();
     }
 
     void Save()
@@ -79,17 +90,20 @@ public abstract class UpgradeBtnBase : MonoBehaviour
 
     void Load()
     {
-        float tCost;
-        float tValue;
+        string tCost;
+        string tValue;
         int tLevel;
         tLevel = PlayerPrefs.GetInt(saveName + "level");
-        tValue = PlayerPrefs.GetFloat(saveName + "value");
-        tCost = PlayerPrefs.GetFloat(saveName + "cost");
+        tValue = PlayerPrefs.GetString(saveName + "value");
+        tCost = PlayerPrefs.GetString(saveName + "cost");
         locked = PlayerPrefs.GetInt(saveName + "locked") == 0;
         if (tLevel != 0) level = tLevel;
-        if (tValue != 0) value = new BigInteger(tValue);
+        if (tValue != "")
+        {
+            value = new BigInteger(System.Convert.ToInt32(tValue));
+        }
         else value = I_value;
-        if (tCost != 0) cost = new BigInteger(tCost);
+        if (tCost != "") cost = new BigInteger(System.Convert.ToInt32(tCost));
         else cost = I_cost;
     }
 
