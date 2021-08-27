@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class BuskingManager : MonoBehaviour
 {
@@ -24,14 +25,22 @@ public class BuskingManager : MonoBehaviour
     {
         if(cur_time >= max_time)
         {
+            // Clear
             Clear.SetActive(true);
+            Clear.transform.GetChild(0).gameObject.SetActive(true);
         }
         else
         {
             cur_time -= Time.deltaTime * CountSpeed;
             timerbar.value = (float)cur_time / (float)max_time;
 
-            if (Input.anyKeyDown)
+            if (cur_time <= 0)
+            {
+                Clear.SetActive(true);
+                Clear.transform.GetChild(1).gameObject.SetActive(true);
+            }
+
+            if (Input.anyKeyDown) //Test
             {
                 if (cur_time < max_time)
                     cur_time += FillBar;
@@ -47,5 +56,10 @@ public class BuskingManager : MonoBehaviour
                 cur_time += FillBar;
             Debug.Log("OnClick");
         }
+    }
+
+    public void BackMainScene()
+    {
+        SceneManager.LoadScene(0);
     }
 }

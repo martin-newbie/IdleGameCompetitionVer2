@@ -7,7 +7,7 @@ using UnityEngine.EventSystems;
 public class FNK_ScrollManager : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     [SerializeField] Scrollbar scrollbar;
-
+    
     const int SIZE = 3;
     float[] pos = new float[SIZE];
     float distance;
