@@ -6,6 +6,10 @@ using System.Numerics;
 public class MinigameEnd : MonoBehaviour
 {
     private static MinigameEnd instance = null;
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
     public static MinigameEnd Instance
     {
         get
@@ -14,6 +18,7 @@ public class MinigameEnd : MonoBehaviour
             return instance;
         }
     }
+
 
     public void PassMinigameValue(BigInteger value)
     {

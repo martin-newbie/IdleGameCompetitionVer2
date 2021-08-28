@@ -56,6 +56,7 @@ public class FNK_GameManager : MonoBehaviour
                 FindObjectOfType<FlameScript>().Music.Stop();
                 GetComponent<Note_Manager>().SongEnd = true;
                 LastScore.gameObject.SetActive(true);
+                MinigameEnd.Instance.PassMinigameValue((int)score);
                 if (Input.anyKeyDown)
                 {
                     SceneManager.LoadScene(0);
@@ -70,6 +71,7 @@ public class FNK_GameManager : MonoBehaviour
             FindObjectOfType<FlameScript>().Music.Stop();
             GetComponent<Note_Manager>().SongEnd = true;
             LastScore.gameObject.SetActive(true);
+            MinigameEnd.Instance.PassMinigameValue((int)score);
             if (Input.anyKeyDown)
             {
                 SceneManager.LoadScene(0);
