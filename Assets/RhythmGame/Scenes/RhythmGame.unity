@@ -871,7 +871,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aac3ff7682dca40488290fa3c18e7685, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NoteList: []
+  NoteList:
+  - {fileID: 1855519727049859293, guid: dd92811eee46a604195f83d67e77898b, type: 3}
+  - {fileID: 1664584858576131244, guid: 4b54bf1875ace6d4097cf0f9007ba6c4, type: 3}
+  - {fileID: 7577903044467841040, guid: 9f17e46025f3d1b45ad342728de222d3, type: 3}
+  - {fileID: 3849053108439754622, guid: 99f851f743ad83142b8581b9a8f351d8, type: 3}
+  EffectList: []
   Center: {fileID: 535947292}
   Up: {fileID: 1854332650}
   Down: {fileID: 1341342363}
