@@ -20,6 +20,7 @@ public class LoadScene : MonoBehaviour
     }
     public void LoadMainGame()
     {
+       // MinigameEnd.Instance.PassMinigameValue(10000);
         SceneManager.LoadScene("MainGame");
     }
 
