@@ -8,7 +8,7 @@ public class Note_Manager : MonoBehaviour
     public int bpm = 0;
     public int type;
     public int type2;
-    double curTime = 0d;
+    decimal curTime = 0m;
     public List<Spawn> spawn_list;
 
     public bool SongEnd = false;
@@ -35,13 +35,13 @@ public class Note_Manager : MonoBehaviour
 
     void Update()
     {
-        curTime += Time.deltaTime;
+        curTime += (decimal)Time.deltaTime;
 
         if (!SpawnEnd)
         {
             if(!SongEnd)
             {
-                if (curTime >= 100d / spawn_list[spawnIndex].bpm)
+                if (curTime >= 100m / spawn_list[spawnIndex].bpm)
                 {
                     if (spawn_list[spawnIndex].type2 != 4)
                     {
@@ -58,7 +58,7 @@ public class Note_Manager : MonoBehaviour
                         SongEnd = true;
                         return;
                     }
-                    curTime -= 100d / spawn_list[spawnIndex].bpm;
+                    curTime -= 100m / spawn_list[spawnIndex].bpm;
                 }
             }    
         }
